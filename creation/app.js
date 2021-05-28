@@ -5,12 +5,12 @@ import { findById } from '../js/utils.js';
 
 // DOMS & CONST
 const form = document.querySelector('form');
+const user = getCurrentUser();
 
 // EVENTS
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
-    const user = getCurrentUser();
     const heroName = formData.get('hero-name');
     const classChoice = document.querySelector('input:checked');
     const classChoiceValue = classChoice.value;
@@ -19,4 +19,12 @@ form.addEventListener('submit', (e) => {
     user.hero = `${heroName}`;
     user.stats = classInfo.stats;
     setUser(user);
+    window.location = '../wilderness/';
 });
+
+// CONSTANT LISTENERS
+if (!user) {
+    window.location = '../';
+} else if (!user.hero === false) {
+    window.location = '../village/';
+}
