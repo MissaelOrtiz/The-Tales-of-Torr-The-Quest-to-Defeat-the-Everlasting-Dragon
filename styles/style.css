@@ -7,7 +7,6 @@ body, html {
 
 * {
     box-sizing:border-box;
-    border: 1px solid black;
 }
 
 body {
@@ -23,7 +22,13 @@ body {
 }
 
 .center-panel {
-    
+    padding: 20px;
+    border: 10px;
+    border-image-slice:15 15 15 15 fill;
+    border-image-width:10px 10px 10px 10px;
+    border-image-outset:0px 0px 0px 0px;
+    border-image-repeat: cover;
+    border-image-source:url("https://i.pinimg.com/originals/60/e9/cd/60e9cdbede8409f7419161e8b92db7dc.png");
 }
 
 .right-panel {
