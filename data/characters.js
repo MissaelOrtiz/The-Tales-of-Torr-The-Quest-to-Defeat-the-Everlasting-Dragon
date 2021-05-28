@@ -37,3 +37,5 @@ const Mage = {
     },
     img: 'mage.png'
 };
+
+export const classes = [Warrior, Bard, Mage];

@@ -1,10 +1,9 @@
 // Imports
-import { getCurrentUser, getUser } from '../js/local-storage-utils.js';
+import { getCurrentUser } from '../js/local-storage-utils.js';
 
 
 // Consts
 const user = getCurrentUser();
-console.log(user);
 
 // DOM elems
 
