@@ -1,8 +1,22 @@
-// import functions and grab DOM elements
+import { createUser, loginUser } from './js/local-storage-utils.js';
 
-// initialize state
+const formLogin = document.getElementById('log-in-form');
+const formSignup = document.getElementById('sign-up-form');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+formSignup.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(formSignup);
+    const username = formData.get('username');
+    const password = formData.get('password');
+
+    createUser(username, password);
+});
+
+formLogin.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(formLogin);
+    const username = formData.get('username');
+    const password = formData.get('password');
+
+    loginUser(username, password);
+});
