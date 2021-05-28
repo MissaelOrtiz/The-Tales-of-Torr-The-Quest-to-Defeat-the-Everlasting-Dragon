@@ -40,10 +40,11 @@ export function createUser(username, password) {
         const newUser = {
             username: username,
             password: password,
-            hero: '',
+            hero: false,
             stats: {
                 class: '',
                 health: 0,
+                maxHealth: 0,
                 attack: 0,
                 ac: 0,
                 gold: 0,
