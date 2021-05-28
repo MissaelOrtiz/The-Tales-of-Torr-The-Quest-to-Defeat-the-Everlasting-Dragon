@@ -12,15 +12,42 @@
 </head>
 
 <body>
-    <header>
-    </header>
+    <section class="left-panel">
 
-    <main>
+    </section>
+    <main class="center-panel">
+        <section class="log-in hidden">
+            <h2>Login</h2>
+            <form id="log-in-form">
+                <label>
+                    Username:
+                    <input name="username"/>
+                </label>
+                <label>
+                    Password:
+                    <input name="password" type="password"/>
+                </label>
+                <button>Continue Adventure!</button>
+            </form>
+        </section>
+        <section class="sign-up">
+            <h2>Signup!</h2>
+            <form>
+                <label>
+                    Desired Username:
+                    <input name="username"/>
+                </label>
+                <label>
+                    Set a Password:
+                    <input name="password" type="password"/>
+                </label>
+                <button>Create Account!</button>
+            </form>
+        </section>
     </main>
-    
-    <footer>
-    </footer>
+    <section class="right-panel">
 
+    </section>
     <script type="module" src="./app.js"></script>
 </body>
 
