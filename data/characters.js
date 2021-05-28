@@ -1,25 +1,25 @@
-const Warrior = {
+const Knight = {
     id: 1,
     stats: {
-        class: 'Warrior',
-        health: 10,
-        maxHealth: 10,
-        attack: 5,
+        class: 'Knight',
+        health: 12,
+        maxHealth: 12,
+        attack: 2,
         ac: 8,
-        gold: 5,
+        gold: 10,
         xp: 0
     },
     img: 'warrior.png'
 };
-const Bard = {
+const Barbarian = {
     id: 2,
     stats: {
-        class: 'Bard',
+        class: 'Barbarian',
         health: 8,
         maxHealth: 8,
-        attack: 3,
+        attack: 5,
         ac: 6,
-        gold: 10,
+        gold: 5,
         xp: 0
     },
     img: 'bard.png'
@@ -32,8 +32,10 @@ const Mage = {
         maxHealth: 5,
         attack: 10,
         ac: 3,
-        gold: 8,
+        gold: 15,
         xp: 0
     },
     img: 'mage.png'
 };
+
+export const classes = [Knight, Barbarian, Mage];
