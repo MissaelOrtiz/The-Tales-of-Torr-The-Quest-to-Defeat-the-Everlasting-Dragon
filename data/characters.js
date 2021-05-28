@@ -38,4 +38,4 @@ const Mage = {
     img: 'mage.png'
 };
 
-export const classes = [Knight, Barbarian, Mage];
+export default [Knight, Barbarian, Mage];
