@@ -8,7 +8,8 @@ const Warrior = {
         ac: 8,
         gold: 5,
         xp: 0
-    }
+    },
+    img: 'warrior.png'
 };
 const Bard = {
     id: 2,
@@ -20,7 +21,8 @@ const Bard = {
         ac: 6,
         gold: 10,
         xp: 0
-    }
+    },
+    img: 'bard.png'
 };
 const Mage = {
     id: 3,
@@ -32,5 +34,6 @@ const Mage = {
         ac: 3,
         gold: 8,
         xp: 0
-    }
+    },
+    img: 'mage.png'
 };
