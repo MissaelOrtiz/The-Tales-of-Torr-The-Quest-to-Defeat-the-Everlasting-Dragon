@@ -29,6 +29,10 @@ body {
     border-image-outset:0px 0px 0px 0px;
     border-image-repeat: cover;
     border-image-source:url("https://i.pinimg.com/originals/60/e9/cd/60e9cdbede8409f7419161e8b92db7dc.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .right-panel {
