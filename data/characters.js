@@ -9,7 +9,7 @@ const Knight = {
         gold: 10,
         xp: 0
     },
-    img: 'warrior.png'
+    img: 'knight.png'
 };
 const Barbarian = {
     id: 2,
