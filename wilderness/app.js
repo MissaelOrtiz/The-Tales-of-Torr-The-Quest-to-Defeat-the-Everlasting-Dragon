@@ -112,22 +112,5 @@ attackButton.addEventListener('click', () => {
 });
 
 fleeButton.addEventListener('click', () => {
-    combatActionsDiv.removeChild(attackButton);
-    combatActionsDiv.removeChild(fleeButton);
-    const gameOver = updateCombatLog(`${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
-    combatLog.append(gameOver);
-    //reset user stats
-    resetUser(user);
-    clearCurrentEnemy();
-    //return to login after timeout
-    const resetButton = document.createElement('button');
-    resetButton.classList = 'reset-game';
-    resetButton.textContent = 'New Game?';
-
-    //reset button event listener
-    resetButton.addEventListener('click', () => {
-        window.location = '../village/';
-    });
-
-    combatActionsDiv.append(resetButton);
+    flee(user, enemy);
 });

@@ -1,5 +1,6 @@
 import { findById } from './utils.js';
 import monsters from '../data/monsters.js';
+import { setUser } from './local-storage-utils.js';
 
 export function generateMonster() {
     const rndmNumber = Math.ceil(Math.random() * monsters.length);
@@ -38,8 +39,13 @@ export function flee(user, enemy) {
     if (user.stats.gold < enemy.stats.gold) {
         return alert('You are too poor to flee! You must fight!');
     } else {
-        user.stats.gold = user.stats.gold - enemy.stats.gold;
-    }
+        const confirmFlee = confirm(`Do you want to flee for ${enemy.stats.gold} gold?`);
+        if (confirmFlee) {
+            user.stats.gold = user.stats.gold - enemy.stats.gold;
+            setUser(user);
+            window.location = '../village/';
+        }
+    } 
 }
 export function updateCombatLog(string) {
     const p = document.createElement('p');
