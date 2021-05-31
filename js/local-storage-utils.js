@@ -56,3 +56,12 @@ export function createUser(username, password) {
         loginUser(username, password);
     }
 }
+
+export function setCurrentEnemy(mnstr) {
+    const stringyMonster = JSON.stringify(mnstr);
+    localStorage.setItem('CURRENT_ENEMY', stringyMonster);
+}
+
+export function clearCurrentEnemy() {
+    localStorage.removeItem('CURRENT_ENEMY');
+}
