@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/login.css">
     <title>The Tales of Torr: The Quest to Defeat the Everlasting Dragon</title>
 </head>
 
@@ -16,37 +17,43 @@
         <span class="torch-1">
             <img src="https://purepng.com/public/uploads/large/purepng.com-hand-torchhand-torchfireflamewoodropelightinglightweaponwarmthmedievalold-12715256231447x6lw.png"/ height="600px" width="400px">
         </span>
-        <span id="character-sheet">character sheet goes here</span>
     </section>
     <main class="center-panel">
-        <section class="log-in hidden">
-            <h2>Login</h2>
-            <form id="log-in-form">
-                <label>
-                    Username:
-                    <input name="username"/>
-                </label>
-                <label>
-                    Password:
-                    <input name="password" type="password"/>
-                </label>
-                <button>Continue Adventure!</button>
-            </form>
-        </section>
-        <section class="sign-up">
-            <h2>Signup!</h2>
-            <form id="sign-up-form">
-                <label>
-                    Desired Username:
-                    <input name="username"/>
-                </label>
-                <label>
-                    Set a Password:
-                    <input name="password" type="password"/>
-                </label>
-                <button>Create Account!</button>
-            </form>
-        </section>
+        <img src="./assets/title.png" id="title-picture" alt="The Tales of Torr: The Quest to Defeat the Everlasting Dragon">
+            <span class="container">
+            <section class="log-in hidden">
+                <h2>Login!</h2>
+                <form id="log-in-form">
+                    <label>
+                        Username:
+                        <input name="username"/>
+                    </label>
+                    <br>
+                    <label>
+                        Password:
+                        <input name="password" type="password"/>
+                    </label>
+                    <br>
+                    <button>Continue Adventure!</button>
+                </form>
+            </section>
+            <section class="sign-up">
+                <h2>Signup!</h2>
+                <form id="sign-up-form">
+                    <label>
+                        Desired Username:
+                        <input name="username"/>
+                    </label>
+                    <br>
+                    <label>
+                        Set a Password:
+                        <input name="password" type="password"/>
+                    </label>
+                    <br>
+                    <button>Create Account!</button>
+                </form>
+            </section>
+        </span>
     </main>
     <section class="right-panel">
         <span class="torch-2">
