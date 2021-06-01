@@ -46,6 +46,7 @@ export function createUser(username, password) {
                 health: 0,
                 maxHealth: 0,
                 attack: 0,
+                speed: 0,
                 ac: 0,
                 gold: 0,
                 xp: 0 },
@@ -55,4 +56,35 @@ export function createUser(username, password) {
         setUser(newUser);
         loginUser(username, password);
     }
+}
+
+
+export function setCurrentEnemy(mnstr) {
+    const stringyMonster = JSON.stringify(mnstr);
+    localStorage.setItem('CURRENT_ENEMY', stringyMonster);
+}
+
+export function getCurrentEnemy() {
+    const enemy = getUser('CURRENT_ENEMY');
+    return enemy;
+}
+
+export function clearCurrentEnemy() {
+    localStorage.removeItem('CURRENT_ENEMY');
+}
+
+export function resetUser(user) {
+    user.hero = false;
+    user.stats = {
+        class: '',
+        health: 0,
+        maxHealth: 0,
+        attack: 0,
+        speed: 0,
+        ac: 0,
+        gold: 0,
+        xp: 0 };
+    user.completedquests = {};
+    user.items = {};
+    setUser(user);
 }

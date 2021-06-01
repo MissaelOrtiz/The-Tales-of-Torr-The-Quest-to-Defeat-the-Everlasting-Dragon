@@ -5,7 +5,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0; 
-    background-color:cornsilk;
+    background-color:honeydew;
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -16,20 +16,42 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    border: 3px red solid;
+}
+
+article {
+    border: 3px blue solid;
+    width: auto;
+    padding: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: yellowgreen;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#dev-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 4px purple solid;
+
 }
 
 footer {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     border: 3px green solid;
     justify-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
+
 }
 
 .audio-player {
     justify-content: center;
 }
+
+
 
 
 #scroll-left {
@@ -84,3 +106,6 @@ transform: translateX(100%);
 transform: translateX(-100%); 
 }
 }
+
+
+
