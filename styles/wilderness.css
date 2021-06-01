@@ -1,4 +1,14 @@
-
 .combat-arena {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.hero-sprite {
+    width: 30%;
+}
+
+.enemy-sprite {
+    width: 35%;
 }

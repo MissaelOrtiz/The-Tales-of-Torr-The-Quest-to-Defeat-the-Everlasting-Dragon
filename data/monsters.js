@@ -11,7 +11,7 @@ const goblin = {
         gold: 3,
         xp: 4
     },
-    img: 'goblin.png'
+    img: 'goblin'
 };
 const wolf = {
     id: 2,
@@ -26,7 +26,7 @@ const wolf = {
         gold: 10,
         xp: 6 
     },
-    img: 'wolf.png'
+    img: 'wolf'
 };
 const bandit = {
     id: 3,
@@ -41,7 +41,7 @@ const bandit = {
         gold: 5,
         xp: 6
     },
-    img: 'bandit.png'
+    img: 'bandit'
 };
 const slime = {
     id: 4,
@@ -56,7 +56,7 @@ const slime = {
         gold: 2,
         xp: 6 
     },
-    img: 'slime.png'
+    img: 'slime'
 };
 const abomination = {
     id: 5,
@@ -71,7 +71,6 @@ const abomination = {
         gold: 0,
         xp: 10 
     },
-    img: 'abomination.png'
 };
 
 export default [goblin, wolf, bandit, slime, abomination];
