@@ -77,7 +77,7 @@ const Dio = {
     atk: 9,
     ac: 9,
     gold: 15,  
-    image: 'top-dio.jpg',
+    image: 'top-dio.png',
 };
 
 const Taemin = {
