@@ -1,3 +1,4 @@
+
 .left-panel {
     display: flex;
     flex-direction: column;
@@ -12,3 +13,46 @@
     border-image-outset: 1;
     border-image-repeat: round;
 }
+
+.hero-attack {
+    margin-left: 100px;
+}
+
+/* @keyframes attack {
+    transform: translateX(100%);
+    from { left: 0px; }
+    to { left: 200px; }
+} */
+
+/* @-webkit-keyframes attack {
+    30% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+    66% {
+        transform: translateX(80%);
+        visibility: visible;
+    }
+    99% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+} */
+
+/* @keyframes attack {
+    20% {
+        left: 20px;
+    }
+    40% {
+        left: 50px;
+    }
+    60% {
+        left: 100px;
+    }
+    80% {
+        left: 30px;
+    }
+    100% {
+        left: 0px;
+    }
+} */

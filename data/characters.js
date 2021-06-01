@@ -10,7 +10,6 @@ const Knight = {
         gold: 10,
         xp: 0
     },
-    img: 'knight.png'
 };
 const Barbarian = {
     id: 2,
@@ -24,7 +23,6 @@ const Barbarian = {
         gold: 5,
         xp: 0
     },
-    img: 'bard.png'
 };
 const Mage = {
     id: 3,
@@ -38,7 +36,6 @@ const Mage = {
         gold: 15,
         xp: 0
     },
-    img: 'mage.png'
 };
 
 export default [Knight, Barbarian, Mage];

@@ -7,7 +7,8 @@ const combatLog = document.querySelector('.combat-log');
 const combatActionsDiv = document.querySelector('.combat-actions');
 const attackButton = document.querySelector('#attack');
 const fleeButton = document.querySelector('#flee');
-
+const heroSprite = document.querySelector('.hero-sprite');
+const enemySprite = document.querySelector('.enemy-sprite');
 
 //set global constants
 let user = getCurrentUser();
@@ -18,7 +19,7 @@ let enemy = getCurrentEnemy();
 
 
 //initialize state
-
+heroSprite.src = `../assets/characters/${user.stats.class}-sprite.png`;
 
 
 //combat event listeners
@@ -38,6 +39,16 @@ attackButton.addEventListener('click', () => {
         setCurrentEnemy(enemy);
         const successfulAttack = updateCombatLog(`${user.hero} attacks ${enemy.stats.name} for ${damageRoll} damage.`);
         combatLog.append(successfulAttack);
+        heroSprite.src = `../assets/characters/${user.stats.class}-sprite-attack.png`;
+        //toggle CSS class on with animation on hero sprite
+        heroSprite.classList.add('hero-attack');
+        //timeout animation cycle and toggle CSS class off
+        setTimeout(() => {
+            //switch back to default image
+            heroSprite.src = `../assets/characters/${user.stats.class}-sprite.png`;
+            heroSprite.classList.remove('hero-attack');
+        }, 1000);
+
     }
 
     //check enemy health
@@ -93,6 +104,7 @@ attackButton.addEventListener('click', () => {
         combatActionsDiv.removeChild(fleeButton);
         const gameOver = updateCombatLog(`${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
         combatLog.append(gameOver);
+        heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
         //reset user stats
         resetUser(user);
         clearCurrentEnemy();
@@ -103,7 +115,7 @@ attackButton.addEventListener('click', () => {
 
         //reset button event listener
         resetButton.addEventListener('click', () => {
-            window.location = '../';
+            window.location = '../village/';
         });
 
         combatActionsDiv.append(resetButton);
