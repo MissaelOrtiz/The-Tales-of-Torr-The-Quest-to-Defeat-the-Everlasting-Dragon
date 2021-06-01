@@ -2,6 +2,10 @@
     margin-left: 100px;
 }
 
+.enemy-attack {
+    margin-right: 100px;
+}
+
 /* @keyframes attack {
     transform: translateX(100%);
     from { left: 0px; }
