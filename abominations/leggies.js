@@ -1,30 +1,57 @@
 
-const Birb = {
+const Duck = {
     id: 301,
-    name: 'Birb',
+    name: 'duck',
     atk: 6,
     ac: 5,
     gold: 2,
-    image: 'leggies-birb.png',
+    image: 'leggie-duck.jpg',
 };
 
 const Centaur = {
     id: 302,
-    name: 'Centaur',
+    name: 'taur',
     atk: 9,
     ac: 9,
     gold: 15,  
-    image: 'leggies-centaur.png',
+    image: 'leggie-centaur.jpg',
 };
 
 const Mermaid = {
     id: 303,
-    name: 'Mermaid',
+    name: 'maid',
     atk: 12,
-    ac: 10,
+    ac: 2,
     gold: 20,
-    image: 'leggies-mermaid.png',
+    image: 'leggie-mermaid.jpg',
 };
 
-const leggies = [Birb, Centaur, Mermaid];
+const Tentacles = {
+    id: 304,
+    name: "tacled bad boi who doesn't have a permit for that machine gun",
+    atk: 12,
+    ac: 2,
+    gold: 20,
+    image: 'leggie-tentacles.jpg',
+};
+
+const Jolie = {
+    id: 305,
+    name: 'olie',
+    atk: 12,
+    ac: 2,
+    gold: 20,
+    image: 'leggie-jolie.jpg',
+};
+
+const Kitty = {
+    id: 306,
+    name: 'kitty, Queen of Fupas',
+    atk: 12,
+    ac: 2,
+    gold: 20,
+    image: 'leggie-royalkitty.jpg',
+};
+
+const leggies = [Duck, Centaur, Mermaid, Tentacles, Jolie, Kitty];
 export default leggies;
