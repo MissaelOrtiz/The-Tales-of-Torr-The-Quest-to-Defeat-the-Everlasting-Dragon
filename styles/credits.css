@@ -1,0 +1,111 @@
+@import "../node_modules/nes.css/css/nes.css";
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0; 
+    background-color:honeydew;
+    font-family: 'Press Start 2P', cursive;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    border: 3px red solid;
+}
+
+article {
+    border: 3px blue solid;
+    width: auto;
+    padding: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: yellowgreen;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#dev-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 4px purple solid;
+
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 3px green solid;
+    justify-items: center;
+
+}
+
+.audio-player {
+    justify-content: center;
+}
+
+
+
+
+#scroll-left {
+    height: 50px; 
+    overflow:hidden;
+    position: relative;
+ 
+
+}
+
+#scroll-left p {
+position: absolute;
+width: 100%;
+height: 100%;
+margin: 0;
+line-height: 50px;
+text-align: center;
+background-image: linear-gradient(to left, violet, indigo, blue, green, orange, red );
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+
+/* Starting position */
+-moz-transform:translateX(100%);
+-webkit-transform:translateX(100%); 
+transform:translateX(100%);
+
+/* Apply animation to this element */ 
+-moz-animation: scroll-left 12s linear infinite;
+-webkit-animation: scroll-left 12s linear infinite;
+animation: scroll-left 12s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+0% { -moz-transform: translateX(100%); }
+100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+0% { -webkit-transform: translateX(100%); }
+100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+0% { 
+-moz-transform: translateX(100%); /* Browser bug fix */
+-webkit-transform: translateX(100%); /* Browser bug fix */
+transform: translateX(100%); 
+}
+100% { 
+-moz-transform: translateX(-100%); /* Browser bug fix */
+-webkit-transform: translateX(-100%); /* Browser bug fix */
+transform: translateX(-100%); 
+}
+}
+
+
+
