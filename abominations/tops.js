@@ -71,5 +71,23 @@ const Dolan = {
     image: 'top-dolan.jpg',
 };
 
-const tops = [Buscemi, Owlbear, Loops, Redcap, Bboy, Gumiho, Dogstack, Dolan];
+const Dio = {
+    id: 209,
+    name: 'Dio',
+    atk: 9,
+    ac: 9,
+    gold: 15,  
+    image: 'top-dio.jpg',
+};
+
+const Taemin = {
+    id: 210,
+    name: 'suspiciously handsome Taemin',
+    atk: 9,
+    ac: 9,
+    gold: 15,  
+    image: 'top-taemin.jpg',
+};
+
+const tops = [Buscemi, Owlbear, Loops, Redcap, Bboy, Gumiho, Dogstack, Dolan, Dio, Taemin];
 export default tops;

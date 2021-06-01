@@ -53,5 +53,14 @@ const Kitty = {
     image: 'leggie-royalkitty.jpg',
 };
 
-const leggies = [Duck, Centaur, Mermaid, Tentacles, Jolie, Kitty];
+const Brando = {
+    id: 307,
+    name: "brando, who screeches 'IT WAS ME!'",
+    atk: 12,
+    ac: 2,
+    gold: 20,
+    image: 'leggie-brando.jpg',
+};
+
+const leggies = [Duck, Centaur, Mermaid, Tentacles, Jolie, Kitty, Brando];
 export default leggies;
