@@ -33,8 +33,8 @@ function getRandomInt(min, max) {
 }
 
 function generateName() {
-    var name1 = ['Borticle', 'Pickleman', 'Bungholemius', 'Boofenacious', 'Barfimillius', 'Bacterial', 'Bowserlicious', 'Brandynugget', 'Berillium', 'Bendandsnap', 'Breadbunter', 'Benedict', 'Blathers', 'Basketball', 'Brundlefly', 'Blashpemous', 'Bronelius', 'Quackmuncher', 'Bucketwrench', 'Brøtherhamper', 'Bansheesweat', 'Battlestar', 'Borkenator', 'Bromeister', 'Boomtastic', 'Bignacious D.'];
-    var name2 = ['Crotchetygoop', 'Quack III Esq', 'Crucialpants', 'Crumbtananatch', 'Cucumbermelon', 'Corderoy', 'Clementine', 'Crackity-Jones', 'Codswallop', 'Crustaceous', 'Craftfloop', 'California', 'Cumberbatch', 'Choochootrain', 'Clowntickler', 'Cahootsman', 'Crabapple', 'Chinchillasplash', 'Chestershire', 'Cerulean', 'Chippendale', 'Clappenator 3000', 'Camembert'];
+    var name1 = ['Borticle', 'Pickleman', 'Bungholemius', 'Boofenacious', 'Barfimillius', 'Bonkjelly', 'Bacterial', 'Bowserlicious', 'Brandynugget', 'Berillium', 'Bendandsnap', 'Breadbunter', 'Benedict', 'Blathers', 'Basketball', 'Brundlefly', 'Blashpemous', 'Bronelius', 'Quackmuncher', 'Bucketwrench', 'Brøtherhamper', 'Bansheesweat', 'Battlestar', 'Borkenator', 'Bromeister', 'Boomtastic', 'Bignacious D.'];
+    var name2 = ['Crotchetygoop', 'Quack III Esq', 'Crucialpants', 'Crumbtananatch', 'Cucumbermelon', 'Corderoy', 'Clementine', 'Crackity-Jones', 'Codswallop', 'Crustaceous', 'Capitalism', 'Craftfloop', 'California', 'Cloptastic', 'Cumberbatch', 'Choochootrain', 'Clowntickler', 'Cahootsman', 'Crabapple', 'Chinchillasplash', 'Chestershire', 'Cerulean', 'Chippendale', 'Clappenator 3000', 'Camembert'];
     var name = capFirst(name1[getRandomInt(0, name1.length - 1)]) + ' ' + capFirst(name2[getRandomInt(0, name2.length - 1)]);
     return name;
 }
