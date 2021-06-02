@@ -10,6 +10,7 @@ const attackButton = document.querySelector('#attack');
 const fleeButton = document.querySelector('#flee');
 const heroSprite = document.querySelector('.hero-sprite');
 const enemySprite = document.querySelector('.enemy-sprite');
+const leftPanelDisplay = document.querySelector('.left-panel');
 
 //set global constants
 const randomEnemy = generateMonster();
