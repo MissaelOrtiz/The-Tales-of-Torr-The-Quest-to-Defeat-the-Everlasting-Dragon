@@ -12,9 +12,7 @@ body, html {
 .center-panel {
     display: flex;
     flex-direction: column;
-    background-image: url("https://img2.pngio.com/paper-parchment-stationery-template-scroll-mystique-transparent-parchment-background-png-800_1067.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.466);
 }
 
 #title-picture {

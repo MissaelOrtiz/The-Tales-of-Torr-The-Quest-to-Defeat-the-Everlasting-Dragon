@@ -58,19 +58,19 @@ const slime = {
     },
     img: 'slime'
 };
-const abomination = {
-    id: 5,
-    stats: {
-        level: 2,
-        name: 'Oh Gods, What is That',
-        health: 15,
-        maxHealth: 15,
-        attack: 5,
-        speed: 2,
-        ac: 4,
-        gold: 0,
-        xp: 10 
-    },
-};
+// const abomination = {
+//     id: 5,
+//     stats: {
+//         level: 2,
+//         name: 'Oh Gods, What is That',
+//         health: 15,
+//         maxHealth: 15,
+//         attack: 5,
+//         speed: 2,
+//         ac: 4,
+//         gold: 0,
+//         xp: 10 
+//     },
+// };
 
-export default [goblin, wolf, bandit, slime, abomination];
+export default [goblin, wolf, bandit, slime];
