@@ -5,7 +5,7 @@ import { getCurrentUser, setUser } from '../../js/local-storage-utils.js';
 //set DOMS and CONSTs
 const mercButtVillage = document.querySelector('.merc-butt-village');
 const mercButtTalk = document.querySelector('.merc-butt-talk');
-const mercButtBuy = document.querySelector('.merc-butt-buy');
+//const mercButtBuy = document.querySelector('.merc-butt-buy');
 const botCenter = document.querySelector('.bot-center');
 
 const user = getCurrentUser();
