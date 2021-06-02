@@ -1,7 +1,7 @@
 import { generateMonster, combatAttackRoll, combatDamageRoll, doesAttackHit, dealDamage, grantRewards, flee } from '../js/combat.js';
 import { getCurrentUser, setUser, setCurrentEnemy, getCurrentEnemy, clearCurrentEnemy, resetUser } from '../js/local-storage-utils.js';
 import { updateLog } from '../js/log.js';
-import { renderHeroStats } from '../js/render-hero-stats.js';
+import { renderHeroStats, updateRenderedHeroStats } from '../js/render-hero-stats.js';
 
 //grab DOM elements
 const combatLog = document.querySelector('.combat-log');
@@ -43,7 +43,7 @@ attackButton.addEventListener('click', () => {
         setCurrentEnemy(enemy);
         //output results to user
         updateLog(combatLog, `> ${user.hero} attacks ${enemy.stats.name} for ${damageRoll} damage.`);
-        renderHeroStats(user);
+        updateRenderedHeroStats(user);
         //change sprite image to attack
         heroSprite.src = `../assets/characters/${user.stats.class}-sprite-attack.png`;
         heroSprite.classList.add('hero-attack');
@@ -63,7 +63,7 @@ attackButton.addEventListener('click', () => {
             grantRewards(user, enemy);
             //output results
             updateLog(combatLog, `> ${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
-            renderHeroStats(user);
+            updateRenderedHeroStats(user);
             //set local storage
             setUser(user);
             clearCurrentEnemy();
@@ -104,7 +104,7 @@ attackButton.addEventListener('click', () => {
                 dealDamage(user, damageRoll);
                 setUser(user);
                 updateLog(combatLog, `> ${enemy.stats.name} attacks ${user.hero} for ${damageRoll} damage.`);
-                renderHeroStats(user);
+                updateRenderedHeroStats(user);
                 //timeout to display enemy attack
                 enemySprite.classList.add('enemy-attack');
                 //timeout to switch back to default image + positioning
@@ -120,7 +120,7 @@ attackButton.addEventListener('click', () => {
             combatActionsDiv.removeChild(attackButton);
             combatActionsDiv.removeChild(fleeButton);
             updateLog(combatLog, `> ${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
-            renderHeroStats(user);
+            updateRenderedHeroStats(user);
             heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
             //return to login after timeout
             const resetButton = document.createElement('button');

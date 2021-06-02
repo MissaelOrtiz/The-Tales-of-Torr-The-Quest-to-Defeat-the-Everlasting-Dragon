@@ -1,7 +1,6 @@
 const heroNameDisplay = document.querySelector('.hero-name');
 const heroPortrait = document.querySelector('.hero-picture');
 const healthStatDisplay = document.querySelector('.health-stat');
-const maxHealthStatDisplay = document.querySelector('.maxhealth-stat');
 const attackDisplay = document.querySelector('.attack-stat');
 const speedDisplay = document.querySelector('.speed-stat');
 const acDisplay = document.querySelector('.ac-stat');
@@ -15,6 +14,12 @@ export function renderHeroStats(user) {
     attackDisplay.textContent = user.stats.attack;
     speedDisplay.textContent = user.stats.speed;
     acDisplay.textContent = user.stats.ac;
+    goldDisplay.textContent = user.stats.gold;
+    xpDisplay.textContent = user.stats.xp;
+}
+
+export function updateRenderedHeroStats(user) {
+    healthStatDisplay.textContent = `${user.stats.health} / ${user.stats.maxHealth}`;
     goldDisplay.textContent = user.stats.gold;
     xpDisplay.textContent = user.stats.xp;
 }
