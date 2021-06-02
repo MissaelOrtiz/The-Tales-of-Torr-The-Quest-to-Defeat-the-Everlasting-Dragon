@@ -13,21 +13,44 @@ body, html {
     box-sizing: border-box;
 }
 
-main {
-    overflow: scroll;
-    
-}
 body {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    background-image: none;
+    grid-template-columns: 1fr minmax(1000px, 8fr) 1fr;
+    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
-img {
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-panel {
+    background-color: rgba(47, 79, 79, 0);
+    background-image: none;
+    padding: 0;
+    margin: 10px;
+    display: inline;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map {
     z-index: 0;
     position: absolute;
 }
+
+/* .locations {
+    padding: 0;
+    margin: 0;
+    background-image: none;
+    background-repeat: no-repeat;
+} */
+
 button {
     z-index: 50;
     position: relative;
