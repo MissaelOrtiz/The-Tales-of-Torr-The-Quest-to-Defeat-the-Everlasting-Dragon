@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body, html {
     width: 100%;
     height: 100%;
@@ -12,31 +14,120 @@ body, html {
 body {
     display: grid;
     grid-template-columns: 1fr minmax(500px, 3fr) 1fr;
+    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
 .left-panel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
+    justify-content: space-around;
+
 }
 
-.center-panel {
-    border-image-slice:15 15 15 15 fill;
-    border-image-width:10px 10px 10px 10px;
-    border-image-outset:0px 0px 0px 0px;
-    border-image-repeat: cover;
-    border-image-source:url("https://i.pinimg.com/originals/60/e9/cd/60e9cdbede8409f7419161e8b92db7dc.png");
+.hero-picture {
+    border: 10px solid transparent;
+    border-image-slice: 60px fill;
+    border-image-width: 50px;
+    border-image-repeat: stretch;
+    border-image-outset: 50px;
+    border-image-source: url('../assets/border.png');
+}
+
+.hero-attack {
+    margin-left: 100px;
+}
+
+#character-sheet {
+    height: 600px;
+    width: 350px;
+    background-image: url('../assets/parchment.png');
+    background-size: 350px 600px;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+}
+
+.hero-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hp-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-bars img {
+    height: 300px; 
+    width: 325px;
+}
+
+.enemy-attack {
+    margin-right: 100px;
+}
+
+.center-panel {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 4fr 1fr 3fr;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    justify-content: center;
+    background-color: rgba(255, 251, 246, 0.783);
 }
 
 .right-panel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
+}
+
+.hero-sprite {
+    width: 30%;
+}
+.combat-log {
+    height: 100%;
+    /* background-image: url('../assets/parchment.png');
+    background-size: cover; */
+    background-color: rgba(207, 166, 52, 0.151);
+    overflow-y: scroll;
+    padding: 10px;
+    border: 5px double black;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 3.0rem;
+}
+
+.combat-actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-between;
+    padding: 10px;
+    border: 5px double black;
+    border-radius: 10px;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.combat-arena {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(250, 250, 240);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* background-position-y: -100px; */
+    border: 5px double black;
+    border-radius: 10px;
 }
 
 #abominable-monster {
@@ -53,19 +144,19 @@ body {
 .top {
     margin-top: 100px;
     align-items: center;
-    width: 500px;
-    margin-bottom: -10px;
+    width: 300px;
+    margin-bottom: -20px;
     padding: 0px;
 }
 
 .leggie {
-    margin-top: -8px;
-    width: 500px;
+    margin-top: -5px;
+    width: 300px;
 }
 
 #abominame {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
-    margin: 35px;
-    padding: 20px;
+    margin: 5px;
+    padding: 10px;
 }
