@@ -13,24 +13,56 @@
 
 <body>
     <section class="left-panel">
-
+        <span id="character-sheet">
+            <p class="hero-name">NAME GOES HERE</p>
+            <span class="portrait">
+                <img src="" class="hero-picture" height="200px" width="200px">
+            </span>
+            <span class="stats">
+                ATK: 
+            </span>
+        <span class="hero-bars">
+            <!-- <span class="hp-bar">
+                <img src="../assets/real-hp.png" height="20px" width="20px">
+                <img src="../assets/fill-bar.png" height="100px" width="200px">
+            </span>
+            <img src="../assets/bar.png" height="100px" width="100px">
+            <span class="xp-bar">
+                <img src="../assets/real-xp.png" height="100px" width="100px">
+                <img src="../assets/fill-bar.png" height="100px" width="100px">
+            </span> -->
+            <img src="../assets/HpXp.png">
+        </span>
+    </span>
     </section>
     <main class="center-panel">
-        <div id="abominable-monster">
-                <section id="top" class="abomibody">
-                    <img class="top" id="top-img" src="" />
-                </section>
-                <section id="leggie" class="abomibody">
-                    <img class="leggie" id="leggie-img" src="" />
-                </section>
+            <div class="combat-arena">
+                <img src="" class="hero-sprite">
+                <div id="abominable-monster">
+                    <section id="top" class="abomibody">
+                        <img class="top" id="top-img" src="" />
+                    </section>
+                    <section id="leggie" class="abomibody">
+                        <img class="leggie" id="leggie-img" src="" />
+                    </section>
+                </div>
+                
             </div>
-            <p id="abominame">
-            </p>
+            <div class="combat-actions">
+                <button id="attack">Attack</button>
+                <button id="flee">Flee</button>
+            </div>
+            <div class="combat-log">
+                <p id="abominame">
+                </p>
+            </div>
+        </main>
+        
     </main>
     <section class="right-panel">
 
     </section>
-    <script type="module" src="./render-abominations.js"></script>
+    <script type="module" src="./app.js"></script>
 </body>
 
 </html>
