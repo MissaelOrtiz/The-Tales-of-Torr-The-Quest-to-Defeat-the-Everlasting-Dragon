@@ -7,8 +7,8 @@
 
 .hero-picture {
     border: 10px solid transparent;
-    border-image-slice: 60 fill;
-    border-image-width: 50;
+    border-image-slice: 60px fill;
+    border-image-width: 50px;
     border-image-repeat: stretch;
     border-image-outset: 50px;
     border-image-source: url('../assets/border.png');
