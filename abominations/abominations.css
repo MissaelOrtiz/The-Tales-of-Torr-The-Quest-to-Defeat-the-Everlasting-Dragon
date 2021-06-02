@@ -59,12 +59,13 @@ body {
 }
 
 .leggie {
-    margin-top: -10px;
+    margin-top: -8px;
     width: 500px;
 }
 
 #abominame {
     font-size: 30px;
     text-align: center;
-    margin: 5px;
+    margin: 35px;
+    padding: 20px;
 }
