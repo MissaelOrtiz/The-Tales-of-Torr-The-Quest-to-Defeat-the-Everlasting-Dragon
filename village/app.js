@@ -7,7 +7,7 @@ const tavernButton = document.querySelector('.tavern');
 const churchButton = document.querySelector('.church');
 const labButton = document.querySelector('.laboratory');
 const merchantButton = document.querySelector('.merchant');
-const wildButton = document.querySelector('.wild');
+const wildernessButton = document.querySelector('.wilderness');
 
 const user = getCurrentUser();
 
@@ -28,7 +28,7 @@ merchantButton.addEventListener('click', () => {
     window.location = './Merchant/';
 });
 
-wildButton.addEventListener('click', () => {
+wildernessButton.addEventListener('click', () => {
     window.location = '../wilderness/';
 });
 // QUESTLISTENER
