@@ -16,23 +16,20 @@ body, html {
 body {
     display: grid;
     grid-template-columns: 1fr minmax(500px, 3fr) 1fr;
+    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
 .left-panel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
 .center-panel {
-    padding: 20px;
-    border: 10px;
-    border-image-slice:15 15 15 15 fill;
-    border-image-width:10px 10px 10px 10px;
-    border-image-outset:0px 0px 0px 0px;
-    border-image-repeat: cover;
-    border-image-source:url("https://i.pinimg.com/originals/60/e9/cd/60e9cdbede8409f7419161e8b92db7dc.png");
+    padding: 100px 100px 0px 100px;
+    background-image: url("../assets/parchment.png");
+    background-size: cover;
+    background-color: rgba(47, 79, 79, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,5 +41,4 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }

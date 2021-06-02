@@ -32,7 +32,7 @@ attackButton.addEventListener('click', () => {
 
     //if attack misses, then output missed attack to user... else attack hits, then...
     if (!attackResult) {
-        const failedAttack = updateCombatLog(`${user.hero} attacks ${enemy.stats.name} but misses.`);
+        const failedAttack = updateCombatLog(`> ${user.hero} attacks ${enemy.stats.name} but misses.`);
         combatLog.append(failedAttack);
     } else {
         //how much damage does the attack do?apply damage to enemy and update enemy's stats in local storage
@@ -40,7 +40,7 @@ attackButton.addEventListener('click', () => {
         dealDamage(enemy, damageRoll);
         setCurrentEnemy(enemy);
         //output results to user
-        const successfulAttack = updateCombatLog(`${user.hero} attacks ${enemy.stats.name} for ${damageRoll} damage.`);
+        const successfulAttack = updateCombatLog(`> ${user.hero} attacks ${enemy.stats.name} for ${damageRoll} damage.`);
         combatLog.append(successfulAttack);
         //change sprite image to attack
         heroSprite.src = `../assets/characters/${user.stats.class}-sprite-attack.png`;
@@ -58,7 +58,7 @@ attackButton.addEventListener('click', () => {
         //user gets swag
         grantRewards(user, enemy);
         //output results
-        const victory = updateCombatLog(`${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
+        const victory = updateCombatLog(`> ${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
         combatLog.append(victory);
         //set local storage
         setUser(user);
@@ -92,13 +92,13 @@ attackButton.addEventListener('click', () => {
         const enemyAttackResult = doesAttackHit(enemy, user, enemyRoll);
         //if the attack misses, then output result... else if it hits, then calc damage, update local storage, and output result.
         if (!enemyAttackResult) {
-            const failedAttack = updateCombatLog(`${enemy.stats.name} attacks ${user.hero} but misses.`);
+            const failedAttack = updateCombatLog(`> ${enemy.stats.name} attacks ${user.hero} but misses.`);
             combatLog.append(failedAttack); 
         } else {
             const damageRoll = combatDamageRoll(enemy);
             dealDamage(user, damageRoll);
             setUser(user);
-            const successfulAttack = updateCombatLog(`${enemy.stats.name} attacks ${user.hero} for ${damageRoll} damage.`);
+            const successfulAttack = updateCombatLog(`> ${enemy.stats.name} attacks ${user.hero} for ${damageRoll} damage.`);
             combatLog.append(successfulAttack);
             //timeout to display enemy attack
             setTimeout(() => {
@@ -114,7 +114,7 @@ attackButton.addEventListener('click', () => {
     if (user.stats.health <= 0) {
         combatActionsDiv.removeChild(attackButton);
         combatActionsDiv.removeChild(fleeButton);
-        const gameOver = updateCombatLog(`${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
+        const gameOver = updateCombatLog(`> ${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
         combatLog.append(gameOver);
         heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
         //reset user stats
