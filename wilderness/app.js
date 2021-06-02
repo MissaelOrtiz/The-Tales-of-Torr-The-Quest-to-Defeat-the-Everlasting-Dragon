@@ -9,7 +9,7 @@ const attackButton = document.querySelector('#attack');
 const fleeButton = document.querySelector('#flee');
 const heroSprite = document.querySelector('.hero-sprite');
 const enemySprite = document.querySelector('.enemy-sprite');
-
+const heroPortrait = document.querySelector('.hero-picture');
 //set global constants
 let user = getCurrentUser();
 
@@ -20,6 +20,7 @@ let enemy = getCurrentEnemy();
 
 //initialize state
 heroSprite.src = `../assets/characters/${user.stats.class}-sprite.png`;
+heroPortrait.src = `../assets/characters/${user.stats.class}.png`;
 
 
 //combat event listeners
