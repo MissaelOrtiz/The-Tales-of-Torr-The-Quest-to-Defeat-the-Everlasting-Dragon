@@ -40,7 +40,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: white;
-    border: 4px purple solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     justify-items: center;
@@ -74,7 +73,7 @@ footer {
     overflow: hidden;
     position: relative;
     font-size: 25px;
-    background-color:mintcream;
+    background-color: white;
     
  
 }
