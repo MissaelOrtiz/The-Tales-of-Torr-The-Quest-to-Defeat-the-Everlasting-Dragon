@@ -1,0 +1,58 @@
+@import "./node_modules/nes.css/css/nes.css";
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    overflow: scroll;
+    
+}
+body {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    background-image: none;
+}
+
+img {
+    z-index: 0;
+    position: absolute;
+}
+button {
+    z-index: 50;
+    position: relative;
+}
+
+.merchant {
+    position: relative;
+    top: 40px;
+    left: 60px;
+}
+
+.tavern {
+    position: relative;
+    top: 140px;
+    left: 90px;
+}
+
+.wilderness {
+    position: relative;
+    top: 40px;
+    left: 60px;
+}
+
+.merchant {
+    position: relative;
+    top: 40px;
+    left: 60px;
+}
