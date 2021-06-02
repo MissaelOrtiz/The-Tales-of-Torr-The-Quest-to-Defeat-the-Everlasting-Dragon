@@ -25,7 +25,8 @@ enemySprite.src = `../assets/monsters/${enemy.img}.png`;
 //combat event listeners
 attackButton.addEventListener('click', () => {
     //user attacks first
-
+    attackButton.disabled = true;
+    fleeButton.disabled = true;
     //first... does the attack hit? store result in variable
     const attackRoll = combatAttackRoll();
     const attackResult = doesAttackHit(user, enemy, attackRoll);
@@ -34,6 +35,7 @@ attackButton.addEventListener('click', () => {
     if (!attackResult) {
         const failedAttack = updateCombatLog(`> ${user.hero} attacks ${enemy.stats.name} but misses.`);
         combatLog.append(failedAttack);
+        combatLog.scrollTop = combatLog.scrollHeight;
     } else {
         //how much damage does the attack do?apply damage to enemy and update enemy's stats in local storage
         const damageRoll = combatDamageRoll(user);
@@ -42,6 +44,7 @@ attackButton.addEventListener('click', () => {
         //output results to user
         const successfulAttack = updateCombatLog(`> ${user.hero} attacks ${enemy.stats.name} for ${damageRoll} damage.`);
         combatLog.append(successfulAttack);
+        combatLog.scrollTop = combatLog.scrollHeight;
         //change sprite image to attack
         heroSprite.src = `../assets/characters/${user.stats.class}-sprite-attack.png`;
         heroSprite.classList.add('hero-attack');
@@ -52,85 +55,95 @@ attackButton.addEventListener('click', () => {
         }, 1000);
     }
 
+    //wait a second
+    setTimeout(() => {
     //check enemy health after the attack
     //if enemy has no health, then the user wins this battle... else the enemy attacks
-    if (enemy.stats.health <= 0) {
-        //user gets swag
-        grantRewards(user, enemy);
-        //output results
-        const victory = updateCombatLog(`> ${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
-        combatLog.append(victory);
-        //set local storage
-        setUser(user);
-        clearCurrentEnemy();
-        //disable attack and flee buttons, add new buttons to give user options to start another battle or return to the village
-        combatActionsDiv.removeChild(attackButton);
-        combatActionsDiv.removeChild(fleeButton);
-        //button to start a new battle
-        const newFightButton = document.createElement('button');
-        newFightButton.classList = 'new-fight';
-        newFightButton.textContent = 'Look for more monsters';
-        //new fight button event listener
-        newFightButton.addEventListener('click', () => {
-            window.location = './';
-        });
-        //button to return to the village
-        const returnButton = document.createElement('button');
-        returnButton.classList = 'return';
-        returnButton.textContent = 'Return to the village';
-        //reset button event listener
-        returnButton.addEventListener('click', () => {
-            window.location = '../village/';
-        });
-
-        //add buttons to DOM
-        combatActionsDiv.append(newFightButton, returnButton);
-
-    } else {
-        //first, does the enemy's attack hit? store result in variable
-        const enemyRoll = combatAttackRoll();
-        const enemyAttackResult = doesAttackHit(enemy, user, enemyRoll);
-        //if the attack misses, then output result... else if it hits, then calc damage, update local storage, and output result.
-        if (!enemyAttackResult) {
-            const failedAttack = updateCombatLog(`> ${enemy.stats.name} attacks ${user.hero} but misses.`);
-            combatLog.append(failedAttack); 
-        } else {
-            const damageRoll = combatDamageRoll(enemy);
-            dealDamage(user, damageRoll);
+        if (enemy.stats.health <= 0) {
+            //user gets swag
+            grantRewards(user, enemy);
+            //output results
+            const victory = updateCombatLog(`> ${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
+            combatLog.append(victory);
+            combatLog.scrollTop = combatLog.scrollHeight;
+            //set local storage
             setUser(user);
-            const successfulAttack = updateCombatLog(`> ${enemy.stats.name} attacks ${user.hero} for ${damageRoll} damage.`);
-            combatLog.append(successfulAttack);
-            //timeout to display enemy attack
-            setTimeout(() => {
-                enemySprite.classList.add('enemy-attack');
-            }, 1000);
-            //timeout to switch back to default image + positioning
-            setTimeout(() => {
-                enemySprite.classList.remove('enemy-attack');
-            }, 2000);
-        }
-    }
-    //check to see if user's dead yet
-    if (user.stats.health <= 0) {
-        combatActionsDiv.removeChild(attackButton);
-        combatActionsDiv.removeChild(fleeButton);
-        const gameOver = updateCombatLog(`> ${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
-        combatLog.append(gameOver);
-        heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
-        //reset user stats
-        resetUser(user);
-        clearCurrentEnemy();
-        //return to login after timeout
-        const resetButton = document.createElement('button');
-        resetButton.classList = 'reset-game';
-        resetButton.textContent = 'New Game?';
-        //reset button event listener
-        resetButton.addEventListener('click', () => {
-            window.location = '../village/';
-        });
+            clearCurrentEnemy();
+            //disable attack and flee buttons, add new buttons to give user options to start another battle or return to the village
+            combatActionsDiv.removeChild(attackButton);
+            combatActionsDiv.removeChild(fleeButton);
+            //button to start a new battle
+            const newFightButton = document.createElement('button');
+            newFightButton.classList = 'new-fight';
+            newFightButton.textContent = 'Look for more monsters';
+            //new fight button event listener
+            newFightButton.addEventListener('click', () => {
+                window.location = './';
+            });
+            //button to return to the village
+            const returnButton = document.createElement('button');
+            returnButton.classList = 'return';
+            returnButton.textContent = 'Return to the village';
+            //reset button event listener
+            returnButton.addEventListener('click', () => {
+                window.location = '../village/';
+            });
 
-        combatActionsDiv.append(resetButton);
-    }
+            //add buttons to DOM
+            combatActionsDiv.append(newFightButton, returnButton);
+
+        } else {
+            //first, does the enemy's attack hit? store result in variable
+            const enemyRoll = combatAttackRoll();
+            const enemyAttackResult = doesAttackHit(enemy, user, enemyRoll);
+            //if the attack misses, then output result... else if it hits, then calc damage, update local storage, and output result.
+            if (!enemyAttackResult) {
+                const failedAttack = updateCombatLog(`> ${enemy.stats.name} attacks ${user.hero} but misses.`);
+                combatLog.append(failedAttack);
+                combatLog.scrollTop = combatLog.scrollHeight;
+                attackButton.disabled = false;
+                fleeButton.disabled = false;
+            } else {
+                const damageRoll = combatDamageRoll(enemy);
+                dealDamage(user, damageRoll);
+                setUser(user);
+                const successfulAttack = updateCombatLog(`> ${enemy.stats.name} attacks ${user.hero} for ${damageRoll} damage.`);
+                combatLog.append(successfulAttack);
+                combatLog.scrollTop = combatLog.scrollHeight;
+            //timeout to display enemy attack
+                enemySprite.classList.add('enemy-attack');
+                //timeout to switch back to default image + positioning
+                setTimeout(() => {
+                    enemySprite.classList.remove('enemy-attack');
+                    attackButton.disabled = false;
+                    fleeButton.disabled = false;
+                }, 1000);
+            }
+        }
+        //check to see if user's dead yet
+        if (user.stats.health <= 0) {
+            combatActionsDiv.removeChild(attackButton);
+            combatActionsDiv.removeChild(fleeButton);
+            const gameOver = updateCombatLog(`> ${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
+            combatLog.append(gameOver);
+            combatLog.scrollTop = combatLog.scrollHeight;
+            heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
+            //return to login after timeout
+            const resetButton = document.createElement('button');
+            resetButton.classList = 'reset-game';
+            resetButton.textContent = 'New Game?';
+            //reset button event listener
+            resetButton.addEventListener('click', () => {
+                //reset user stats
+                resetUser(user);
+                clearCurrentEnemy();
+                //redirect
+                window.location = '../village/';
+            });
+
+            combatActionsDiv.append(resetButton);
+        }
+    }, 1000);
 });
 
 //run away!
