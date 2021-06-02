@@ -10,7 +10,6 @@ const botCenter = document.querySelector('.bot-center');
 
 const user = getCurrentUser();
 
-
 //event listeners
 churchButtVillage.addEventListener('click', () => {
     window.location = '../';
