@@ -1,16 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-.hero-sprite {
-    width: 30%;
-}
-
-.enemy-sprite {
-    width: 45%;
-}
-
-.enemy-container {
-    display: flex;
-    justify-content: flex-end;
-}
 
 .top-center {
     background-image: url('../assets/Forest.jpg');
