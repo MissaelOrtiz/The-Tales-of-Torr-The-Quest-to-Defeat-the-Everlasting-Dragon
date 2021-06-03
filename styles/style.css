@@ -151,3 +151,7 @@ img.hp, img.xp {
     font-size: 14px;
     line-height: 3.0rem;
 }
+
+.hidden {
+    display: none;
+}
