@@ -36,7 +36,7 @@ churchButtHeal.addEventListener('click', () => {
         updateRenderedHeroStats(user);
     } else {
         const denyMessage = updateCombatLog('You are poor. Come back when you are not poor.');
-        botCenter.appened(denyMessage);
+        botCenter.append(denyMessage);
     }
 
 });
