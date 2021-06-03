@@ -1,4 +1,4 @@
-const tavernChatter = [
+export const tavernChatter = [
     `"'Ello! What's that? You're new here? Don't go into that tower to the east, weird sounds come from there."`,
     `"That strange cart in the marchant ward is run by a grifter, I tell ya! Drank one of them potions and now I have a rash in- actually, just take my word for it."`,
     `"That tower to the east? That was owned by Sbeve of House Buscemi long ago, but they went mad and locked themselves up!"`,
@@ -31,3 +31,4 @@ const tavernChatter = [
     `You walk up to an individual who is eating raw potatoes like apples. You walk away from that individual.`,
     `There is an individual dancing in the common floor, dispite the lack of music.`
 ];
+
