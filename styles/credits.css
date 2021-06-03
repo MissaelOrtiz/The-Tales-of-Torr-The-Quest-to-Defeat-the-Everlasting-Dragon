@@ -67,7 +67,7 @@ body {
 .icon-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     color: papayawhip;
 }
 
