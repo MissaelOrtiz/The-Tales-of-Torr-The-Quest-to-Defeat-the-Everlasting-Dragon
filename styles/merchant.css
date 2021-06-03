@@ -19,6 +19,8 @@
 
 .top-center {
     background-image: url('../assets/Village.jpeg');
+    background-position-y: 1150px;
+    background-position-x: -10px;
     border: double 10px black;
     padding: 10px;
     border-radius: 10px;
