@@ -8,6 +8,7 @@ const churchButton = document.querySelector('.church');
 const labButton = document.querySelector('.laboratory');
 const merchantButton = document.querySelector('.merchant');
 const wildernessButton = document.querySelector('.wilderness');
+const bossButton = document.querySelector('.boss');
 
 const user = getCurrentUser();
 
@@ -31,7 +32,15 @@ merchantButton.addEventListener('click', () => {
 wildernessButton.addEventListener('click', () => {
     window.location = '../wilderness/';
 });
+
+bossButton.addEventListener('click', () => {
+    window.location = '../credits/';
+});
 // QUESTLISTENER
 if (!user.hero) {
     window.location = '../creation/';
+}
+
+if (user.stats.xp >= 100) {
+    bossButton.classList.toggle('hidden');
 }
