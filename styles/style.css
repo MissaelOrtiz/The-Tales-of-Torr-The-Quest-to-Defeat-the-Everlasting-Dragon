@@ -80,6 +80,7 @@ button {
 .portrait {
     position: relative;
     z-index: 1;
+    margin: var(--gutter);
 }
 
 .hero-picture {
@@ -112,7 +113,7 @@ button {
 }
 
 .stats .bar {
-    margin: var(--gutter) 0;
+    margin: calc(var(--gutter) / 2) 0;
 }
 
 img.hp, img.xp {
