@@ -54,13 +54,14 @@ body {
 } */
 
 button {
+    cursor: pointer;
     z-index: 50;
     position: relative;
 }
 
 button.merchant {
     top: 285px;
-    right: 210px;
+    right: 843px;
     background-image: url('../assets/village/merchant.png');
     background-size: cover;
     background-color: transparent;
@@ -71,45 +72,75 @@ button.merchant {
     color: white;
 }
 
-button.merchant:hover {
-        animation: glow 1s ease-in-out infinite alternate;
-        background-color: rgba(55, 62, 59, 0.475);
+/* button.boss {
+    bottom: 120px;
+    right: 30px;
+} */
+
+button.church {
+    bottom: 20px;
+    left: 70px;
+    background-image: url('../assets/village/church.jpg');
+    background-size: cover;
+    background-color: transparent;
+    height: 350px;
+    width: 206px;
+    border: none;
+    border-radius: 100px;
+    color: white;
 }
-button {
-    cursor: pointer;
+
+button.tavern {
+    top: 410px;
+    left: 470px;
+    background-image: url('../assets/village/tavern.png');
+    background-size: cover;
+    background-color: transparent;
+    height: 520px;
+    width: 276px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+}
+
+button.laboratory {
+    top: 100px;
+    left: 650px;
+    background-image: url('../assets/village/laboratory.jpg');
+    background-size: cover;
+    background-color: transparent;
+    height: 240px;
+    width: 96px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+}
+
+button.wilderness {
+    top: 540px;
+    left: 92px;
+    background-image: url('../assets/village/wilderness.png');
+    background-size: cover;
+    background-color: transparent;
+    height: 420px;
+    width: 276px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+}
+
+button.merchant:hover, button.tavern:hover, 
+button.wilderness:hover, button.church:hover, 
+button.laboratory:hover {
+        animation: glow 2s ease-in-out infinite alternate;
+        background-color: rgba(105, 106, 106, 0.858);
 }
 
 @-webkit-keyframes glow {
     from {
-    box-shadow: 0 0 10px rgba(53, 46, 46, 0.666), 0 0 20px rgba(67, 67, 62, 0.701), 0 0 30px rgba(95, 91, 81, 0.849), 0 0 40px rgba(80, 77, 71, 0.481), 0 0 50px rgba(82, 77, 76, 0.81), 0 0 60px rgba(105, 89, 88, 0.742), 0 0 70px rgba(49, 44, 44, 0.714);
+        box-shadow: 0 0 20px rgba(83, 75, 75, 0.653), 0 0 30px rgba(133, 132, 132, 0.767), 0 0 40px rgba(70, 63, 60, 0.781), 0 0 50px rgba(171, 169, 166, 0.76), 0 0 60px rgba(78, 78, 74, 0.795), 0 0 70px rgba(182, 182, 182, 0.767);
     }
-    
     to {
-    box-shadow: 0 0 20px rgba(83, 75, 75, 0.653), 0 0 30px rgba(80, 71, 71, 0.767), 0 0 40px rgba(70, 63, 60, 0.781), 0 0 50px rgba(80, 77, 71, 0.76), 0 0 60px rgba(78, 78, 74, 0.795), 0 0 70px rgba(97, 90, 90, 0.767);
+        box-shadow: 0 0 10px rgba(181, 181, 181, 0.666), 0 0 20px rgba(186, 186, 186, 0.701), 0 0 30px rgba(211, 211, 211, 0.849), 0 0 40px rgba(181, 181, 181, 0.481), 0 0 50px rgba(180, 178, 178, 0.81), 0 0 60px rgba(210, 210, 210, 0.742), 0 0 70px rgba(49, 44, 44, 0.714);
     }
-}
-
-.tavern {
-    top: 780px;
-    left: 470px;
-}
-
-.wilderness {
-    top: 830px;
-    left: 880px;
-}
-
-.church {
-    top: 170px;
-    left: 760px;
-}
-
-.laboratory {
-    top: 400px;
-    left: 1050px;
-}
-
-.boss {
-    top: 70px;
-    left: 160px;
 }
