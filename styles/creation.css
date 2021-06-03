@@ -1,0 +1,8 @@
+.character {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    border: 5px double black;
+    border-radius: 10px;
+}
