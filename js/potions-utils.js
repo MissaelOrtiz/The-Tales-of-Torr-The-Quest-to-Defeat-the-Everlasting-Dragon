@@ -10,8 +10,14 @@ export function renderPotions(item) {
     li.classList.add('potion');
     li.title = item.name;
 
+    const div1 = document.createElement('div');
+    div1.classList.add('item-left-panel');
+
+    const div2 = document.createElement('div');
+    div2.classList.add('item-right-panel');
+
     const h3 = document.createElement('h3');
-    h3.textContent.item.name;
+    h3.textContent = item.name;
     
     const img = document.createElement('img');
     img.src = `../../assets/potions/${item.img}`;
@@ -40,10 +46,12 @@ export function renderPotions(item) {
             }
         }
     });
-    li.appendChild(h3);
-    li.appendChild(img);
-    li.appendChild(p1);
-    li.appendChild(p2);
-    li.appendChild(button);
+    div1.appendChild(h3);
+    div1.appendChild(img);
+    div1.appendChild(p1);
+    div2.appendChild(p2);
+    div2.appendChild(button);
+    li.appendChild(div1);
+    li.appendChild(div2);
     return li;
 }
