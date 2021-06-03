@@ -51,17 +51,27 @@ body {
     font-size: 80%;
 }
 
-footer {
+.audio-section {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
     justify-items: center;
 
 }
 
-.audio-player {
-    justify-content: center;
-    
+#toggle-music {
+    color: blanchedalmond;
+    font-size: 25px;
+    text-shadow: -2px 0 purple, 0 1px purple, 1px 0 purple, 0 -2px black;
 }
+
+.icon-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: papayawhip;
+}
+
+
 
 
 /*============ ANIMATIONS AND EFFECTS ================*/
