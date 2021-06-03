@@ -1,9 +1,9 @@
-.center-panel {
+/* .center-panel {
+    Overflow: auto;
+} */
+
+body {
     display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    background-image: url('.a/');
 }
 .character {
     display: flex;
