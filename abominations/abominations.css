@@ -49,7 +49,6 @@ body {
         box-shadow: 0 0 10px rgba(58, 224, 43, 0.858), 0 0 20px rgba(121, 241, 121, 0.701), 0 0 30px rgba(52, 223, 36, 0.849), 0 0 40px rgba(150, 218, 192, 0.481), 0 0 50px rgba(175, 216, 174, 0.81), 0 0 60px rgba(152, 184, 147, 0.742), 0 0 70px rgba(125, 219, 116, 0.714);
     }
 }
-}
 
 .right-panel {
     height: 750px;
@@ -129,7 +128,7 @@ button {
 }
 
 .leggie {
-    margin-top: -5px;
+    margin-top: -10px;
     width: 300px;
 }
 
