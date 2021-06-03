@@ -34,7 +34,7 @@ wildernessButton.addEventListener('click', () => {
 });
 
 bossButton.addEventListener('click', () => {
-    window.location = '../credits/';
+    window.location = './Castle/';
 });
 // QUESTLISTENER
 if (!user.hero) {

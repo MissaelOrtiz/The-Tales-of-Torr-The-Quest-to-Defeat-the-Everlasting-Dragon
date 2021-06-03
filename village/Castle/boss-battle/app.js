@@ -1,7 +1,7 @@
-import { generateMonster, combatAttackRoll, combatDamageRoll, doesAttackHit, dealDamage, grantRewards, flee } from '../js/combat.js';
-import { getCurrentUser, setUser, setCurrentEnemy, getCurrentEnemy, clearCurrentEnemy, resetUser } from '../js/local-storage-utils.js';
-import { updateLog } from '../js/log.js';
-import { renderHeroStats, updateRenderedHeroStats } from '../js/render-hero-stats.js';
+import { generateMonster, combatAttackRoll, combatDamageRoll, doesAttackHit, dealDamage, grantRewards, flee } from '../../../js/combat.js';
+import { getCurrentUser, setUser, setCurrentEnemy, getCurrentEnemy, clearCurrentEnemy, resetUser } from '../../../js/local-storage-utils.js';
+import { updateLog } from '../../../js/log.js';
+import { renderHeroStats, updateRenderedHeroStats } from '../../../js/render-hero-stats.js';
 
 //grab DOM elements
 const combatLog = document.querySelector('.bot-center');
@@ -22,10 +22,9 @@ const characterSheet = renderHeroStats(user);
 leftPanelDisplay.append(characterSheet);
 
 //initialize state
-heroSprite.src = `../assets/characters/${user.stats.class}-sprite.png`;
-enemySprite.src = `../assets/monsters/${enemy.img}.png`;
-enemySprite.classList.add(`${enemy.img}`);
-updateLog(combatLog, `You have found a level ${enemy.stats.level} ${enemy.stats.name} to battle!`);
+heroSprite.src = `../../../assets/characters/${user.stats.class}-sprite.png`;
+enemySprite.src = `../../../assets/village/boss/Dragon.gif`;
+
 
 //combat event listeners
 attackButton.addEventListener('click', () => {
@@ -38,21 +37,21 @@ attackButton.addEventListener('click', () => {
 
     //if attack misses, then output missed attack to user... else attack hits, then...
     if (!attackResult) {
-        updateLog(combatLog, `${user.hero} attacks ${enemy.stats.name} but misses.`);
+        updateLog(combatLog, `> ${user.hero} attacks ${enemy.stats.name} but misses.`);
     } else {
         //how much damage does the attack do?apply damage to enemy and update enemy's stats in local storage
         const damageRoll = combatDamageRoll(user);
         dealDamage(enemy, damageRoll);
         setCurrentEnemy(enemy);
         //output results to user
-        updateLog(combatLog, `${user.hero} attacks ${enemy.stats.name} for ${damageRoll} damage.`);
+        updateLog(combatLog, `> ${user.hero} attacks ${enemy.stats.name} for ${damageRoll} damage.`);
         updateRenderedHeroStats(user);
         //change sprite image to attack
-        heroSprite.src = `../assets/characters/${user.stats.class}-sprite-attack.png`;
+        heroSprite.src = `../../assets/characters/${user.stats.class}-sprite-attack.png`;
         heroSprite.classList.add('hero-attack');
         //timeout to switch back to default image + positioning
         setTimeout(() => {
-            heroSprite.src = `../assets/characters/${user.stats.class}-sprite.png`;
+            heroSprite.src = `../../assets/characters/${user.stats.class}-sprite.png`;
             heroSprite.classList.remove('hero-attack');
         }, 1000);
     }
@@ -65,7 +64,7 @@ attackButton.addEventListener('click', () => {
             //user gets swag
             grantRewards(user, enemy);
             //output results
-            updateLog(combatLog, `${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
+            updateLog(combatLog, `> ${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
             updateRenderedHeroStats(user);
             //set local storage
             setUser(user);
@@ -87,7 +86,7 @@ attackButton.addEventListener('click', () => {
             returnButton.textContent = 'Return to the village';
             //reset button event listener
             returnButton.addEventListener('click', () => {
-                window.location = '../village/';
+                window.location = '../../village/';
             });
 
             //add buttons to DOM
@@ -99,14 +98,14 @@ attackButton.addEventListener('click', () => {
             const enemyAttackResult = doesAttackHit(enemy, user, enemyRoll);
             //if the attack misses, then output result... else if it hits, then calc damage, update local storage, and output result.
             if (!enemyAttackResult) {
-                updateLog(combatLog, `${enemy.stats.name} attacks ${user.hero} but misses.`);
+                updateLog(combatLog, `> ${enemy.stats.name} attacks ${user.hero} but misses.`);
                 attackButton.disabled = false;
                 fleeButton.disabled = false;
             } else {
                 const damageRoll = combatDamageRoll(enemy);
                 dealDamage(user, damageRoll);
                 setUser(user);
-                updateLog(combatLog, `${enemy.stats.name} attacks ${user.hero} for ${damageRoll} damage.`);
+                updateLog(combatLog, `> ${enemy.stats.name} attacks ${user.hero} for ${damageRoll} damage.`);
                 updateRenderedHeroStats(user);
                 //timeout to display enemy attack
                 enemySprite.classList.add('enemy-attack');
@@ -122,7 +121,7 @@ attackButton.addEventListener('click', () => {
         if (user.stats.health <= 0) {
             combatActionsDiv.removeChild(attackButton);
             combatActionsDiv.removeChild(fleeButton);
-            updateLog(combatLog, `${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
+            updateLog(combatLog, `> ${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
             updateRenderedHeroStats(user);
             heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
             //return to login after timeout
@@ -135,7 +134,7 @@ attackButton.addEventListener('click', () => {
                 resetUser(user);
                 clearCurrentEnemy();
                 //redirect
-                window.location = '../village/';
+                window.location = '../../';
             });
 
             combatActionsDiv.append(resetButton);

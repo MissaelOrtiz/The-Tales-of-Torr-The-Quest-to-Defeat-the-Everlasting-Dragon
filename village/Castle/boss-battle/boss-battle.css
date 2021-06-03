@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import "./node_modules/nes.css/css/nes.css";
 
 :root {
     --gutter: 20px;
@@ -9,7 +8,9 @@
 body {
     display: grid;
     grid-template-columns: 1fr minmax(600px, 3fr) 1fr;
-    background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
+    background-image: url('../../../assets/village/boss/castle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* main panel layout */
@@ -22,8 +23,7 @@ body {
 
 .center-panel {
     padding: 100px 100px 0px 100px;
-    background-image: url("../assets/parchment.png");
-    background-size: cover;
+    background-image: none;
     background-color: rgba(47, 79, 79, 0);
     display: grid;
     width: 100%;
@@ -35,7 +35,6 @@ body {
 }
 
 .right-panel {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +56,7 @@ button {
     height: 750px;
     width: 350px;
     padding-top: calc(2 * var(--gutter));
-    background-image: url('../assets/parchment.png');
+    background-image: url('../../../assets/parchment.png');
     background-size: 350px 750px;
     background-repeat: no-repeat;
     display: flex;
@@ -80,7 +79,6 @@ button {
 .portrait {
     position: relative;
     z-index: 1;
-    margin: var(--gutter);
 }
 
 .hero-picture {
@@ -113,7 +111,7 @@ button {
 }
 
 .stats .bar {
-    margin: calc(var(--gutter) / 2) 0;
+    margin: var(--gutter) 0;
 }
 
 img.hp, img.xp {

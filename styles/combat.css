@@ -5,3 +5,74 @@
 .enemy-attack {
     margin-right: 100px;
 }
+
+.hero-sprite {
+    width: 30%;
+}
+
+.enemy-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* This zone is for the individual monster styling! */
+.wolf {
+    width: 300px;
+    height: auto;
+}
+
+.bandit {
+    height: 200px;
+    width: auto;
+}
+
+.zombie {
+    height: 170px;
+    width: auto;
+}
+
+.slime {
+    height: auto;
+    width: 130px;
+}
+
+.goblin {
+    height: 80px;
+    width: auto;
+}
+
+.kingslime {
+    width: 300px;
+    height: auto;
+}
+
+.manticore {
+    width: 300px;
+    height: auto;
+}
+
+.orc {
+    height: 230px;
+    width: auto;
+}
+
+.frog {
+    height: 300px;
+    width: auto;
+}
+
+.werewolf {
+    height: 230px;
+    width: auto;
+}
+
+.vampire {
+    height: 200px;
+    width: auto;
+}
+
+.armor {
+    height: 200px;
+    width: auto;
+}
