@@ -32,6 +32,10 @@ export function renderHeroStats(user) {
     span1.textContent = `${user.stats.health} / ${user.stats.maxHealth}`;
     p1.append(hpImg, span1);
 
+    const imgBar = document.createElement('img');
+    imgBar.classList.add('bar');
+    imgBar.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
+
     //attack stat
     const p2 = document.createElement('p');
     const span2 = document.createElement('span');
@@ -56,9 +60,9 @@ export function renderHeroStats(user) {
     p4.textContent = 'AC:';
     p4.append(span4);
     
-    const imgBar = document.createElement('img');
-    imgBar.classList.add('bar');
-    imgBar.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
+    const imgBar2 = document.createElement('img');
+    imgBar2.classList.add('bar');
+    imgBar2.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
 
     //gold stat
     const p5 = document.createElement('p');
@@ -76,12 +80,20 @@ export function renderHeroStats(user) {
     p6.textContent = 'XP:';
     p6.append(span6);
 
-    const imgBar2 = document.createElement('img');
-    imgBar2.classList.add('bar');
-    imgBar2.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
+    //level stat (goes after HP!)
+    const p7 = document.createElement('p');
+    const span7 = document.createElement('span');
+    span7.classList.add('level-stat');
+    span7.textContent = user.stats.level;
+    p7.textContent = 'LEVEL:';
+    p7.append(span7);
+
+    const imgBar3 = document.createElement('img');
+    imgBar3.classList.add('bar');
+    imgBar3.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
 
 
-    div2.append(p1, p2, p3, p4, imgBar, p5, p6, imgBar2);
+    div2.append(p1, imgBar, p7, p2, p3, p4, imgBar2, p5, p6, imgBar3);
     mainDiv.append(h2, div1, div2);
     return mainDiv;
 }
