@@ -88,12 +88,7 @@ export function renderHeroStats(user) {
     p7.textContent = 'LEVEL:';
     p7.append(span7);
 
-    const imgBar3 = document.createElement('img');
-    imgBar3.classList.add('bar');
-    imgBar3.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
-
-
-    div2.append(p1, imgBar, p7, p2, p3, p4, imgBar2, p5, p6, imgBar3);
+    div2.append(p1, imgBar, p7, p2, p3, p4, imgBar2, p5, p6);
     mainDiv.append(h2, div1, div2);
     return mainDiv;
 }
