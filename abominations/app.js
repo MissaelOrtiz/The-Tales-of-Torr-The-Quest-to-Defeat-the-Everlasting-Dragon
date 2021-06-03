@@ -11,10 +11,15 @@ const combatActionsDiv = document.querySelector('.combat-actions');
 const attackButton = document.querySelector('#attack');
 const fleeButton = document.querySelector('#flee');
 const heroSprite = document.querySelector('.hero-sprite');
+const frankGif = document.querySelector('.frank-gif');
+const frankSays = document.querySelector('.frank-response');
 
 //set global constants
 let enemy = getCurrentEnemy();
 let user = getCurrentUser();
+
+frankGif.src = `./assets/frank-drink.gif`;
+frankSays.textContent = "Go on, darling, let's see what you've got!";
 
 const leftPanelDisplay = document.querySelector('.left-panel');
 const characterSheet = renderHeroStats(user);
@@ -36,6 +41,8 @@ attackButton.addEventListener('click', () => {
     //if attack misses, then output missed attack to user... else attack hits, then...
     if (!attackResult) {
         updateLog(combatLog, `> ${user.hero} attacks ${enemy.stats.name} but misses.`);
+        frankGif.src = `./assets/frank-easy.gif`;
+        frankSays.textContent = 'Poor dear, you missed! Is that the best you can do?';
     } else {
         //how much damage does the attack do?apply damage to enemy and update enemy's stats in local storage
         const damageRoll = combatDamageRoll(user);
@@ -47,6 +54,8 @@ attackButton.addEventListener('click', () => {
         //change sprite image to attack
         heroSprite.src = `../assets/characters/${user.stats.class}-sprite-attack.png`;
         heroSprite.classList.add('hero-attack');
+        frankGif.src = `./assets/frank-howbout.gif`;
+        frankSays.textContent = 'Not bad, gorgeous. Keep it up and I can make a hero out of you...';
         //timeout to switch back to default image + positioning
         setTimeout(() => {
             heroSprite.src = `../assets/characters/${user.stats.class}-sprite.png`;
@@ -63,6 +72,8 @@ attackButton.addEventListener('click', () => {
             grantRewards(user, enemy);
             //output results
             updateLog(combatLog, `> ${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
+            frankGif.src = `./assets/frank-hand.gif`;
+            frankSays.textContent = "Well fought, my babies! If you want to really make me swoon, I've got another delicious abomination cooked up for you to dance with... Howabout it?";
             updateRenderedHeroStats(user);
             //set local storage
             setUser(user);
@@ -73,7 +84,7 @@ attackButton.addEventListener('click', () => {
             //button to start a new battle
             const newFightButton = document.createElement('button');
             newFightButton.classList = 'new-fight';
-            newFightButton.textContent = 'Look for more monsters';
+            newFightButton.textContent = 'Fight another abomination!';
             //new fight button event listener
             newFightButton.addEventListener('click', () => {
                 window.location = './';
@@ -81,7 +92,7 @@ attackButton.addEventListener('click', () => {
             //button to return to the village
             const returnButton = document.createElement('button');
             returnButton.classList = 'return';
-            returnButton.textContent = 'Return to the village';
+            returnButton.textContent = "That's enough, time to return to the village";
             //reset button event listener
             returnButton.addEventListener('click', () => {
                 window.location = '../village/';
@@ -118,6 +129,8 @@ attackButton.addEventListener('click', () => {
             updateLog(combatLog, `> ${user.hero} has suffered defeat at the hands of ${enemy.stats.name}.`);
             updateRenderedHeroStats(user);
             heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
+            frankGif.src = `./assets/frank-upset.gif`;
+            frankSays.textContent = 'Oh dear, now I have another body to clean up. What a shame, this one could have been such a gallant hero to keep in my trophy case!';
             //return to login after timeout
             const resetButton = document.createElement('button');
             resetButton.classList = 'reset-game';
