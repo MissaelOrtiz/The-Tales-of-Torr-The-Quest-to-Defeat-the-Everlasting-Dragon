@@ -1,18 +1,5 @@
 @import "./node_modules/nes.css/css/nes.css";
 
-
-body, html {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    
-}
-
-* {
-    box-sizing: border-box;
-}
-
 body {
     display: grid;
     grid-template-columns: 1fr 1331px 1fr;

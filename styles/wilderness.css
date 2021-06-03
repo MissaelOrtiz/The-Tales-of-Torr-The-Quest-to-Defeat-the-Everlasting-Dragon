@@ -1,28 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-.center-panel {
-    display: grid;
-    width: 100%;
-    grid-template-rows: 4fr 1fr 3fr;
-    grid-template-columns: 1fr;
-    overflow: hidden;
-    justify-content: center;
-}
-
-.combat-arena {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-image: url('../assets/Forest.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    /* background-position-y: -100px; */
-    border: 5px double black;
-    border-radius: 10px;
-}
-
 .hero-sprite {
     width: 30%;
 }
@@ -36,33 +12,8 @@
     justify-content: flex-end;
 }
 
-.combat-log {
-    height: 100%;
-    /* background-image: url('../assets/parchment.png');
-    background-size: cover; */
-    background-color: rgba(207, 166, 52, 0.151);
-    overflow-y: scroll;
-    padding: 10px;
-    border: 5px double black;
-    border-radius: 10px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
-    line-height: 3.0rem;
-}
-
-.combat-actions {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: space-between;
-    padding: 10px;
-    border: 5px double black;
-    border-radius: 10px;
-}
-
-button {
-    font-family: 'Press Start 2P', cursive;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 5px;
-
+.top-center {
+    background-image: url('../assets/Forest.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }

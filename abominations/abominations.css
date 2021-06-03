@@ -28,12 +28,42 @@ body {
     grid-template-columns: 1fr;
     overflow: hidden;
     justify-content: center;
+    background-color: rgba(172, 229, 153, 0.632);
+    border: 5px double rgb(70, 51, 23);
+    border-radius: 30px;
+    background-image: none;
+    font-family: Aladin;
+    font-size: 20px;
+    text-align: center;
+    animation: glow 2s ease-in-out infinite alternate;
+    height: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 20px rgba(138, 194, 168, 0.653), 0 0 30px rgba(132, 133, 132, 0.767), 0 0 40px rgba(115, 158, 122, 0.781), 0 0 50px rgba(122, 160, 130, 0.76), 0 0 60px rgba(111, 160, 111, 0.795), 0 0 70px rgba(113, 150, 109, 0.767);
+    }
+    to {
+        box-shadow: 0 0 10px rgba(58, 224, 43, 0.858), 0 0 20px rgba(121, 241, 121, 0.701), 0 0 30px rgba(52, 223, 36, 0.849), 0 0 40px rgba(150, 218, 192, 0.481), 0 0 50px rgba(175, 216, 174, 0.81), 0 0 60px rgba(152, 184, 147, 0.742), 0 0 70px rgba(125, 219, 116, 0.714);
+    }
+}
 }
 
 .right-panel {
+    height: 750px;
+    width: 350px;
+    padding-top: calc(2 * var(--gutter));
+    background-image: url('../assets/parchment.png');
+    background-size: 400px 750px;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    margin-top: 75px;
+    margin-right: 20px;
 }
 
 .hero-sprite {
@@ -71,7 +101,7 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(250, 250, 240);
+    background-color: rgb(247, 247, 247);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-position-y: -100px; */
@@ -108,4 +138,27 @@ button {
     text-align: center;
     margin: 5px;
     padding: 10px;
+}
+
+.frank-gif {
+    max-height: 500px;
+    max-width: 90%;
+    min-width: 300px;
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.frank-response {
+    background-color: rgb(178, 255, 71);
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 20px;
+    justify-content: top;
+    font-family: Aladin;
+    font-size: 25px;
 }

@@ -1,6 +1,8 @@
 //import functions
 import { getCurrentUser } from '../../js/local-storage-utils.js';
 import { renderHeroStats } from '../../js/render-hero-stats.js';
+import { updateLog } from '../../js/log.js';
+import { tavernChatter } from '../../data/events.js';
 
 
 //Grab DOMS and set CONSTs
@@ -28,6 +30,7 @@ logOut.addEventListener('click', () => {
 });
 
 tavButtTalk.addEventListener('click', () => {
-    const chatter = 'I will write this function later';
-    botCenter.textContent = chatter;
+    const randomChatter = Math.floor(Math.random() * tavernChatter.length);
+    const chatter = tavernChatter[randomChatter];
+    updateLog(botCenter, chatter);
 });
