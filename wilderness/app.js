@@ -4,8 +4,8 @@ import { updateLog } from '../js/log.js';
 import { renderHeroStats, updateRenderedHeroStats } from '../js/render-hero-stats.js';
 
 //grab DOM elements
-const combatLog = document.querySelector('.combat-log');
-const combatActionsDiv = document.querySelector('.combat-actions');
+const combatLog = document.querySelector('.bot-center');
+const combatActionsDiv = document.querySelector('.mid-center');
 const attackButton = document.querySelector('#attack');
 const fleeButton = document.querySelector('#flee');
 const heroSprite = document.querySelector('.hero-sprite');
