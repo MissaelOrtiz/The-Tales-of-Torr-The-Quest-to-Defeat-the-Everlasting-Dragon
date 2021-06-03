@@ -2,7 +2,7 @@ import { combatAttackRoll, combatDamageRoll, doesAttackHit, dealDamage, grantRew
 import { getCurrentUser, setUser, setCurrentEnemy, getCurrentEnemy, clearCurrentEnemy, resetUser } from '../js/local-storage-utils.js';
 import { renderAbomination } from './render-abominations.js';
 import { updateLog } from '../js/log.js';
-import { renderHeroStats, updateRenderedHeroStats } from '../../js/render-hero-stats.js';
+import { renderHeroStats, updateRenderedHeroStats } from '../js/render-hero-stats.js';
 
 renderAbomination();
 //grab DOM elements
