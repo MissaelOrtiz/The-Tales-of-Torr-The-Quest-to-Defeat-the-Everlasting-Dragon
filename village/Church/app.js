@@ -8,6 +8,7 @@ import { churchChatter } from '../../data/events.js';
 const churchButtVillage = document.querySelector('.church-butt-village');
 const churchButtTalk = document.querySelector('.church-butt-talk');
 const churchButtHeal = document.querySelector('.church-butt-heal');
+const churchButtLevel = document.querySelector('.church-butt-level');
 const botCenter = document.querySelector('.bot-center');
 
 const user = getCurrentUser();
@@ -39,4 +40,18 @@ churchButtHeal.addEventListener('click', () => {
         updateLog(botCenter, 'You lack experience. Come back when you have earned the Light of Torr');
     }
 
+});
+
+churchButtLevel.addEventListener('click', () => {
+    if (user.stats.xp >= 35) {
+        user.stats.xp = user.stats.xp - 35;
+        user.stats.level++;
+        user.stats.speed++;
+        user.stats.ac++;
+        updateLog(botCenter, 'You feel yourself grow stronger as an adventurer!!');
+        setUser(user);
+        updateRenderedHeroStats(user);
+    } else {
+        updateLog(botCenter, 'You lack the experience to ascend. Come back when you have earned the Light of Torr');
+    }
 });
