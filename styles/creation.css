@@ -1,6 +1,6 @@
-/* .center-panel {
-    Overflow: auto;
-} */
+.center-panel {
+    Overflow: visible;
+} 
 
 body {
     display: flex;
