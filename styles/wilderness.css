@@ -28,7 +28,7 @@
 }
 
 .enemy-sprite {
-    width: 35%;
+    width: 45%;
 }
 
 .enemy-container {
@@ -46,6 +46,7 @@
     border: 5px double black;
     border-radius: 10px;
     font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
     line-height: 3.0rem;
 }
 
@@ -60,4 +61,8 @@
 
 button {
     font-family: 'Press Start 2P', cursive;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+
 }
