@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
 @import "./node_modules/nes.css/css/nes.css";
 
 :root {
@@ -56,6 +57,8 @@ button {
 }
 
 .character-sheet {
+    font-family: 'Fondamento', cursive;
+    font-size: 1rem;
     height: 750px;
     width: 350px;
     padding-top: calc(2 * var(--gutter));
@@ -69,7 +72,10 @@ button {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(233, 156, 55);
+    text-shadow: 2px 2px 5px rgb(61, 39, 11);
 }
 
 .hero-name {
@@ -79,7 +85,6 @@ h2 {
 .portrait {
     position: relative;
     z-index: 1;
-    margin: var(--gutter);
 }
 
 .hero-picture {

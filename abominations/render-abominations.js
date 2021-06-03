@@ -41,7 +41,7 @@ export function renderAbomination() {
     let top = grabRandomTop();
     let leggie = grabRandomLeggie();
     let firstName = generateName();
-    let species = (top.name + leggie.name);
+    let species = (top.stats.name + leggie.name);
     const abomination = findById(tops, top.id);
     abomination.name = firstName;
     abomination.type = species;
