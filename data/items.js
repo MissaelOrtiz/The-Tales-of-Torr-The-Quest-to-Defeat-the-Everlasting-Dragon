@@ -43,7 +43,7 @@ export const potions = [PotofHealth, PotofSpeed, PotofXP, PotofStrength];
 const GreaterPotofHealth = {
     id: 1,
     name: 'Greater Potion of Increased Bodily Vitality',
-    description: 'This marvelous brew',
+    description: 'This marvelous brew is strawberry flavored, one of the mightiest flavors in all the realms. This should increase your vitality and color your mouth red!',
     cost: 10,
     affect: 'maxHealth',
     effect: '4',
