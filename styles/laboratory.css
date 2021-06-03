@@ -13,21 +13,20 @@ body, html {
 
 body {
     display: grid;
-    grid-template-columns: 1fr minmax(1000px, 3fr) 1fr;
+    grid-template-columns: 1fr minmax(800px, 3fr) 1fr;
     background-image: url(../assets/village/lab.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
     height: 100%;
-    overflow: hidden;
 }
 
 .left-panel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-left: 50px;
+    justify-content: start;
+    margin-left: 30px;
 }
 
 .character-sheet {
@@ -41,14 +40,33 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 50px;
+}
+
+h1 {
+    background-color: rgba(172, 229, 153, 0.632);
+    border-radius: 30px;
+    font-family: Aladin;
+    font-size: 45px;
+    text-align: center;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-top: 20px;
+    padding: 15px;
 }
 
 h2 {
     font-size: 1.5rem;
 }
 
+p {
+    padding: 10px;
+}
+
 .hero-name {
     margin: var(--gutter);
+    font-family: Montez;
+    font-size: 50px;
+    font-weight: bolder;
 }
 
 .portrait {
@@ -79,6 +97,7 @@ h2 {
     flex-direction: column;
     align-items: stretch;
     margin: var(--gutter);
+    font-family: Aladin;
 }
 .stats p {
     margin: 10px 0;
@@ -99,8 +118,10 @@ img.hp, img.xp {
     background-image: none;
     background-color: rgba(47, 79, 79, 0);
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    margin: 10px;
+    height: 100%;
+    position: relative;
+    bottom: 100px;
 }
 
 .right-panel {
@@ -113,35 +134,33 @@ img.hp, img.xp {
 }
 
 .lab-butt-fight, .lab-butt-flee {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 10px;
-    margin-bottom: 150px;
     background-color: rgb(182, 202, 51);
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     border: 5px double rgb(57, 85, 1);
     font-family: Aladin;
     font-size: 20px;
-
 }
-.lab-gif {
+
+.lab-gif, .slab-gif {
     padding: 10px;
     border-radius: 30px;
     padding: 20px;
+    width: 500px;
 }
 
 .bot-center {
     background-color: rgba(172, 229, 153, 0.632);
-    padding: 20px;
-    margin: 20px;
     border: 5px double rgb(70, 51, 23);
     border-radius: 30px;
     font-family: Aladin;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     width: 600px;
     animation: glow 2s ease-in-out infinite alternate;
+    height: 100%;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 @-webkit-keyframes glow {
