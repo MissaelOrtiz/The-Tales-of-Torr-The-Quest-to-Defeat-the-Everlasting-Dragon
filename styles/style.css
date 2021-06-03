@@ -46,3 +46,7 @@ body {
 .hidden {
     display: none;
 }
+
+button {
+    cursor: pointer;
+}
