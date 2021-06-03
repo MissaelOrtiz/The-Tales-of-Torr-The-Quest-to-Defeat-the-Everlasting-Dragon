@@ -42,7 +42,7 @@ export function renderPotions(item) {
             const confirmPurchase = confirm(`Do you want to puchase ${item.name} for ${item.cost}?`);
             if (confirmPurchase) {
                 user.stats.gold = user.stats.gold - item.cost;
-                user.stats[`${item.affect}`] = user.stats[`${item.affect}`] + item.effect;
+                user.stats[`${item.affect}`] = Number(user.stats[`${item.affect}`]) + Number(item.effect);
                 setUser(user);
                 updateRenderedHeroStats(user);
             }
