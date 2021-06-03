@@ -1,5 +1,6 @@
 //import functions and utilities
 import { getCurrentUser, setUser } from '../js/local-storage-utils.js';
+import { updateRenderedHeroStats } from './render-hero-stats.js';
 
 const user = getCurrentUser();
 
@@ -43,6 +44,7 @@ export function renderPotions(item) {
                 user.stats.gold = user.stats.gold - item.cost;
                 user.stats[`${item.affect}`] = user.stats[`${item.affect}`] + item.effect;
                 setUser(user);
+                updateRenderedHeroStats(user);
             }
         }
     });
