@@ -32,3 +32,47 @@ export const tavernChatter = [
     `There is an individual dancing in the common floor, dispite the lack of music.`
 ];
 
+export const merchantChatter = [
+    `"Why yes, all of my potions are organic, why do you ask?"`,
+    `"These are all natural brews that come straight from the source. What is that source? Don't ask."`,
+    `"It's not safe to go alone, drink this!"`,
+    `"You break it, you buy it!"`,
+    `"You know, being a wealthy potion merchant isn't as easy as it looks!"`,
+    `"Absolutely outrageous prices here, you'll not find better for days! I made sure of it."`,
+    `"Oh, these drab villagers don't have enough coin for my tastes. Perhaps you do, though."`,
+    `The merchant can be seen giving a strange brew to a pigeon. The bird explodes.`,
+    `"I once met a witch who sold me the recipies for my potions. The cost? My honor! HA, what a steal!"`,
+    `The merchant can be seen cleaning old potion vials from the trash pile.`,
+    `"This place is awful. No wealthy clients, no good food, and I sleep in a sty. You can cheer me up by giving me all your gold"`,
+    `"Standing here all day is awfully boring. I should take up adventuring like yourself.... Who am I kidding, this is the best job ever.`,
+    `"Huh?"`,
+    `"Come one, come all! Please sign this waver before your purchase!"`,
+    `"If you've come about the love poti- oh, its you. Hello again.`,
+    `"This merchant has wares if you have coin"`,
+    `"Where do you find all this gold?"`,
+    `"Sigh, what is a beautiful merchant like myself suppose to do in a podunk village like this?"`,
+    `"I've come from a far away land to sell my wares. This place is much brighter than my home."`,
+    `"I've got all you need in a bottle, poultice, or cream!"`,
+    `"I promise, all of my flavorings are natural."`
+];
+
+export const churchChatter = [
+    `"Welcome to the Church of the Everlasting Sun. May the Light shine upon you indefinitely."`,
+    `"May the Light shine upon your days."`,
+    `"Light find you."`,
+    `"There is much for us to do for Torr, but the Light always provides."`,
+    `"Light shine upon thee."`,
+    `"May Light find you in your darkest hour."`,
+    `"Hail, traveler. Find respite in the Light of Torr."`,
+    `The smell of incense is thick in the air.`,
+    `Chanting hymns can be heard singing praise to the sun god.`,
+    `"Torr's blessing be upon you."`,
+    `"We heal those who need it, we ask only for a donation.`,
+    `"The Light provides for all of us, and it can provide for you as well."`,
+    `"We followers of torr abhor evil in all its forms. We hold law highly; please behave yourself in our temple.`,
+    `"You seem in need of direction, shall I read you some passages from the Books of Light?"`,
+    `Several members of the church walk around with a burning cencer of incense.`,
+    `"Are you perhaps interesting in joining the church of Torr?"`,
+    `"The light of the sun is a blessing and manifestation of Torr's Light."`,
+    `"All is well under the Light."`
+];

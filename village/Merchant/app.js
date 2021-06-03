@@ -1,9 +1,10 @@
 //import
-import { updateCombatLog } from '../../js/combat.js';
 import { getCurrentUser } from '../../js/local-storage-utils.js';
 import { greaterPotions, potions } from '../../data/items.js';
 import { renderPotions } from '../../js/potions-utils.js';
 import { renderHeroStats } from '../../js/render-hero-stats.js';
+import { updateLog } from '../../js/log.js';
+import { merchantChatter } from '../../data/events.js';
 
 //set DOMS and CONSTs
 const mercButtVillage = document.querySelector('.merc-butt-village');
@@ -39,7 +40,8 @@ mercButtVillage.addEventListener('click', () => {
 });
 
 mercButtTalk.addEventListener('click', () => {
-    const chatter = updateCombatLog(`hello ${user.hero}.`);
-    botCenter.append(chatter);
+    const randomChatter = Math.floor(Math.random() * merchantChatter.length);
+    const chatter = merchantChatter[randomChatter];
+    updateLog(botCenter, chatter);
 });
 
