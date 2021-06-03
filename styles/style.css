@@ -1,6 +1,8 @@
 @import "./node_modules/nes.css/css/nes.css";
 
-
+:root {
+    --gutter: 20px;
+}
 
 body, html {
     width: 100%;
@@ -19,12 +21,6 @@ body {
     background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
-.left-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .center-panel {
     padding: 100px 100px 0px 100px;
     background-image: url("../assets/parchment.png");
@@ -41,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .hidden {
@@ -49,4 +46,75 @@ body {
 
 button {
     cursor: pointer;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-sheet {
+    height: 750px;
+    width: 350px;
+    padding-top: calc(2 * var(--gutter));
+    background-image: url('../assets/parchment.png');
+    background-size: 350px 750px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.hero-name {
+    margin: var(--gutter);
+}
+
+.portrait {
+    position: relative;
+    z-index: 1;
+    margin: var(--gutter);
+}
+
+.hero-picture {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    z-index: -1;
+}
+
+.hero-picture-border {
+    height: 240px;
+    width: 240px;
+    top: -20px;
+    left: -20px;
+    position: absolute;
+    z-index: 10;
+}
+
+.stats {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: var(--gutter);
+}
+.stats p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats .bar {
+    margin: var(--gutter) 0;
+}
+
+img.hp, img.xp {
+    height: 20px;
 }

@@ -17,56 +17,6 @@ body {
     background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
-.left-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-.hero-picture {
-    border: 10px solid transparent;
-    border-image-slice: 60px fill;
-    border-image-width: 50px;
-    border-image-repeat: stretch;
-    border-image-outset: 50px;
-    border-image-source: url('../assets/border.png');
-}
-
-.hero-attack {
-    margin-left: 100px;
-}
-
-#character-sheet {
-    height: 600px;
-    width: 350px;
-    background-image: url('../assets/parchment.png');
-    background-size: 350px 600px;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hero-bars {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hp-bar {
-    display: flex;
-    flex-direction: row;
-}
-
-.hero-bars img {
-    height: 300px; 
-    width: 325px;
-}
-
 .enemy-attack {
     margin-right: 100px;
 }
@@ -78,7 +28,6 @@ body {
     grid-template-columns: 1fr;
     overflow: hidden;
     justify-content: center;
-    background-color: rgba(255, 251, 246, 0.783);
 }
 
 .right-panel {
@@ -159,4 +108,10 @@ button {
     text-align: center;
     margin: 5px;
     padding: 10px;
+}
+
+.slab-gif {
+    margin-top: 100px;
+    padding: 10px;
+    border-radius: 30px;
 }
