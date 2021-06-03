@@ -21,51 +21,69 @@
     <main class="center-panel">
         <section>
             <form>
-                <div class="character knight">
-                    <label for="1">
-                        <p>Knight</p>
-                        <img src="../assets/characters/knight.png">
-                        <article>
-                            hp: 20,
-                            attack: 6,
-                            speed: 2,
-                            ac: 8,
-                            gold: 10,
+                <label for="1">
+                    <input type="radio" name="job" value="1"/>
+                    <div class="character">
+                        <div class="left-container">
+                            <p>Knight</p>
+                            <img src="../assets/characters/knight.png" class="portrait">
+                        </div>
+                        <div class="right-container">
+                            <article>
+                                hp: 20, <br>
+                                attack: 6, <br>
+                                speed: 2, <br>
+                                ac: 8, <br>
+                                gold: 10, <br>
                         </article>
-                        <input type="radio" name="job" value="1"></input>
-                    </label>
-                </div>
-                <div class="character barbarian">
-                    <label for="2">
+                        </div>
+                    </div>
+                </label>
+                <br>
+                <label for="barbarian">
+                    <input type="radio" name="job" value="2" id="barbarian"/>
+                    <div class="character">
+                        <div class="left-container">
                         <p>Barbarian</p>
-                        <img src="../assets/characters/barbarian.png">
-                        <article>
-                            hp: 12,
-                            attack: 12,
-                            speed: 0,
-                            ac: 6,
-                            gold: 5,
+                        <img src="../assets/characters/barbarian.png" class="portrait">
+                        </div>
+                        <article class="text">
+                            <p class="stats">
+                                STATS: <br>
+                                hp: 12, <br>
+                                attack: 12, <br>
+                                speed: 0, <br>
+                                ac: 6, <br>
+                                gold: 5,
+                            </p>
+                            <p>
+                                Text and description goes here
+                            </p>
                         </article>
-                        <input type="radio" name="job" value="2"></input>
-                    </label>
-                </div>
-                <div class="character mage">
-                    <label for="3">
+                    </div>
+                </label>
+                <br>
+                <label for="mage">
+                    <input type="radio" name="job" value="3" id="mage"/>
+                    <div class="character">
+                        <div class="left-container">
                         <p>Mage</p>
-                        <img src="../assets/characters/mage.png">
+                        <img src="../assets/characters/mage.png" class="portrait">
+                        </div>
                         <article>
-                            health: 6,
-                            maxHealth: 6,
-                            attack: 20,
-                            speed: 1,
-                            ac: 7,
+                            health: 6, <br>
+                            maxHealth: 6, <br>
+                            attack: 20, <br>
+                            speed: 1, <br>
+                            ac: 7, <br>
                             gold: 15,
                         </article>
-                        <input type="radio" name="job" value="3"></input>
-                    </label>
+                    </div>
+                </label>
+                <div class="name-input">
+                    <input type="text" name="hero-name" class="visible">
+                    <button type="submit">Choose your hero</button>
                 </div>
-                <input type="text" name="hero-name">
-                <button type="submit">Choose your hero</button>
             </form>
         </section>
     </main>
