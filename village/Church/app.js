@@ -1,7 +1,8 @@
 //import
-import { updateCombatLog } from '../../js/combat.js';
 import { getCurrentUser, setUser } from '../../js/local-storage-utils.js';
 import { renderHeroStats, updateRenderedHeroStats } from '../../js/render-hero-stats.js';
+import { updateLog } from '../../js/log.js';
+import { churchChatter } from '../../data/events.js';
 
 //set DOMS and CONSTs
 const churchButtVillage = document.querySelector('.church-butt-village');
@@ -22,21 +23,20 @@ churchButtVillage.addEventListener('click', () => {
 });
 
 churchButtTalk.addEventListener('click', () => {
-    const chatter = updateCombatLog(`hello ${user.hero}.`);
-    botCenter.append(chatter);
+    const randomChatter = Math.floor(Math.random() * churchChatter.length);
+    const chatter = churchChatter[randomChatter];
+    updateLog(botCenter, chatter);
 });
 
 churchButtHeal.addEventListener('click', () => {
-    if (user.stats.gold >= 10) {
-        user.stats.gold = user.stats.gold - 10;
+    if (user.stats.xp >= 5) {
+        user.stats.xp = user.stats.xp - 5;
         user.stats.health = user.stats.maxHealth;
-        const healMessage = updateCombatLog('Your wounds are magically healed! Your health has been fully restored!');
-        botCenter.append(healMessage);
+        updateLog(botCenter, 'Your wounds are magically healed! Your health has been fully restored!');
         setUser(user);
         updateRenderedHeroStats(user);
     } else {
-        const denyMessage = updateCombatLog('You are poor. Come back when you are not poor.');
-        botCenter.append(denyMessage);
+        updateLog(botCenter, 'You lack experience. Come back when you have earned the Light of Torr');
     }
 
 });
