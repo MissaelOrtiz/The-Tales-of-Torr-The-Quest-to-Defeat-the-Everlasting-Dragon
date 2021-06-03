@@ -23,6 +23,7 @@ tavButtVillage.addEventListener('click', () => {
 
 logOut.addEventListener('click', () => {
     localStorage.removeItem('CURRENT_USER');
+    
     window.location = '../../';
 });
 

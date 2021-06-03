@@ -17,8 +17,6 @@ body {
     background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
-
-
 .enemy-attack {
     margin-right: 100px;
 }
@@ -30,7 +28,6 @@ body {
     grid-template-columns: 1fr;
     overflow: hidden;
     justify-content: center;
-    background-color: rgba(255, 251, 246, 0.783);
 }
 
 .right-panel {
@@ -111,4 +108,10 @@ button {
     text-align: center;
     margin: 5px;
     padding: 10px;
+}
+
+.slab-gif {
+    margin-top: 100px;
+    padding: 10px;
+    border-radius: 30px;
 }

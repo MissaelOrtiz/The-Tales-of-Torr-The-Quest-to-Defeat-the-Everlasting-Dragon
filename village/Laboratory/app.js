@@ -1,7 +1,7 @@
 import { getCurrentUser } from '../../js/local-storage-utils.js';
 import { renderHeroStats } from '../../js/render-hero-stats.js';
 
-const villageButton = document.querySelector('.lab-butt-village');
+const villageButton = document.querySelector('.lab-butt-flee');
 const abomiButton = document.querySelector('.lab-butt-fight');
 
 const user = getCurrentUser();
