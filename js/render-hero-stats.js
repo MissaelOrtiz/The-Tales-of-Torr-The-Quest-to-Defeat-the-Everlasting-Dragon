@@ -95,7 +95,7 @@ export function renderHeroStats(user) {
 
 export function updateRenderedHeroStats(user) {
     const healthStatDisplay = document.querySelector('.health-stat');
-    const levelDisplay = document.querySelector('level-stat');
+    const levelDisplay = document.querySelector('.level-stat');
     const attackDisplay = document.querySelector('.attack-stat');
     const speedDisplay = document.querySelector('.speed-stat');
     const acDisplay = document.querySelector('.ac-stat');
