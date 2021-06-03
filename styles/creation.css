@@ -5,22 +5,19 @@
 body {
     display: flex;
 }
+
+main {
+    display: flex;
+    align-items: center;
+}
 .character {
     display: flex;
-    flex-direction: column;
-    justify-items: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     border: 5px double black;
     border-radius: 10px;
     text-align: center;
-    transform: scale(0.9) ;
--webkit-transform: scale(0.9) ;
--moz-transform: scale(0.9) ;
-    background-color: rgba(0, 0, 0, 0.541);
-    color: gold;
-    -webkit-box-shadow:0px 0px 152px 18px rgba(45,255,196,0.6);
--moz-box-shadow: 0px 0px 152px 18px rgba(45,255,196,0.6);
-box-shadow: 0px 0px 152px 18px rgba(45,255,196,0.6);
 }
 
 .radio-buttons {
@@ -29,6 +26,61 @@ box-shadow: 0px 0px 152px 18px rgba(45,255,196,0.6);
     text-align: center;
 }
 
-.knight {
-    position: relative;
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: row;
+    justify-items: right;
+    align-items: center;
+    position: right;
+}
+
+.portrait {
+    width: 200px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    border: 3px ;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    text-decoration-line: underline;
+}
+
+input:checked + div {
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 0px 0px 32px 9px rgba(0,0,0,0); 
+    box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 0px 0px 32px 9px rgba(0,0,0,0);
+    color: gold;
+    background: #00000049;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    margin: 15px;
+}
+
+input {
+    display: none;
+}
+
+.visible {
+    display: inline-block;
+    margin: 15px;
 }
