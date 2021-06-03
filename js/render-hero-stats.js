@@ -83,12 +83,14 @@ export function renderHeroStats(user) {
 
 export function updateRenderedHeroStats(user) {
     const healthStatDisplay = document.querySelector('.health-stat');
+    const attackDisplay = document.querySelector('.attack-stat');
     const speedDisplay = document.querySelector('.speed-stat');
     const acDisplay = document.querySelector('.ac-stat');
     const goldDisplay = document.querySelector('.gold-stat');
     const xpDisplay = document.querySelector('.xp-stat');
 
     healthStatDisplay.textContent = `${user.stats.health} / ${user.stats.maxHealth}`;
+    attackDisplay.textContent = user.stats.attack;
     speedDisplay.textContent = user.stats.speed;
     acDisplay.textContent = user.stats.ac;
     goldDisplay.textContent = user.stats.gold;
