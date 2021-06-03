@@ -2,6 +2,7 @@ const Knight = {
     id: 1,
     stats: {
         class: 'knight',
+        level: 1,
         health: 20,
         maxHealth: 20,
         attack: 6,
@@ -15,6 +16,7 @@ const Barbarian = {
     id: 2,
     stats: {
         class: 'barbarian',
+        level: 1,
         health: 12,
         maxHealth: 12,
         attack: 12,
@@ -28,6 +30,7 @@ const Mage = {
     id: 3,
     stats: {
         class: 'mage',
+        level: 1,
         health: 6,
         maxHealth: 6,
         attack: 20,
