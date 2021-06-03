@@ -88,18 +88,14 @@ export function renderHeroStats(user) {
     p7.textContent = 'LEVEL:';
     p7.append(span7);
 
-    const imgBar3 = document.createElement('img');
-    imgBar3.classList.add('bar');
-    imgBar3.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
-
-
-    div2.append(p1, imgBar, p7, p2, p3, p4, imgBar2, p5, p6, imgBar3);
+    div2.append(p1, imgBar, p7, p2, p3, p4, imgBar2, p5, p6);
     mainDiv.append(h2, div1, div2);
     return mainDiv;
 }
 
 export function updateRenderedHeroStats(user) {
     const healthStatDisplay = document.querySelector('.health-stat');
+    const levelDisplay = document.querySelector('level-stat');
     const attackDisplay = document.querySelector('.attack-stat');
     const speedDisplay = document.querySelector('.speed-stat');
     const acDisplay = document.querySelector('.ac-stat');
@@ -107,6 +103,7 @@ export function updateRenderedHeroStats(user) {
     const xpDisplay = document.querySelector('.xp-stat');
 
     healthStatDisplay.textContent = `${user.stats.health} / ${user.stats.maxHealth}`;
+    levelDisplay.textContent = user.stats.level;
     attackDisplay.textContent = user.stats.attack;
     speedDisplay.textContent = user.stats.speed;
     acDisplay.textContent = user.stats.ac;
