@@ -43,6 +43,7 @@ export function createUser(username, password) {
             hero: false,
             stats: {
                 class: '',
+                level: 0,
                 health: 0,
                 maxHealth: 0,
                 attack: 0,
@@ -78,6 +79,7 @@ export function resetUser(user) {
     user.stats = {
         class: '',
         health: 0,
+        level: 0;
         maxHealth: 0,
         attack: 0,
         speed: 0,
