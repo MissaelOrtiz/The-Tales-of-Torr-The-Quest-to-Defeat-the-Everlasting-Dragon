@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --gutter: 20px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 2fr) 200px;
+    background-image: url('../assets/village/boss/dragon-approach.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.center-panel {
+    padding: 100px 100px 0px 100px;
+    background-image: none;
+    background-size: cover;
+    background-color: transparent;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 4fr 2fr 2fr;
+    grid-template-columns: 2fr;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 250px;
+}
+
+.bot-center {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+/* styling for left panel */
+.character-sheet {
+    font-family: 'Fondamento', cursive;
+    font-size: 1rem;
+    height: 750px;
+    width: 350px;
+    padding-top: calc(2 * var(--gutter));
+    background-image: url('../assets/parchment.png');
+    background-size: 350px 750px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.character-sheet h2 {
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(233, 156, 55);
+    text-shadow: 2px 2px 5px rgb(61, 39, 11);
+}
+
+.hero-name {
+    margin: var(--gutter);
+}
+
+.portrait {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-picture {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    z-index: -1;
+}
+
+.hero-picture-border {
+    height: 240px;
+    width: 240px;
+    top: -20px;
+    left: -20px;
+    position: absolute;
+    z-index: 10;
+}
+
+.stats {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: var(--gutter);
+}
+.stats p {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats .bar {
+    margin: var(--gutter) 0;
+}
+
+img.hp, img.xp {
+    height: 20px;
+}
+
+.fade-in-text {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    font-family: Aladin;
+    font-size: 23px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(128, 0, 19, 0.65);
+    border-radius: 30px;
+    border: none;
+    box-shadow: 15px 15px 15px 15px rgba(128, 0, 19, 0.65);
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+.fade-in-button {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    font-family: 'Press Start 2P', cursive;
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(140, 148, 140);
+    animation: fadeIn linear 10s;
+    -webkit-animation: fadeIn linear 10s;
+    -moz-animation: fadeIn linear 10s;
+    -o-animation: fadeIn linear 10s;
+    -ms-animation: fadeIn linear 10s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
