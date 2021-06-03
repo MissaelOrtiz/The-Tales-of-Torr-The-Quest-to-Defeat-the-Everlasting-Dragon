@@ -1,6 +1,7 @@
 //import
 import { updateCombatLog } from '../../js/combat.js';
 import { getCurrentUser, setUser } from '../../js/local-storage-utils.js';
+import { renderHeroStats, updateRenderedHeroStats } from '../../js/render-hero-stats.js';
 
 //set DOMS and CONSTs
 const churchButtVillage = document.querySelector('.church-butt-village');
@@ -10,10 +11,14 @@ const botCenter = document.querySelector('.bot-center');
 
 const user = getCurrentUser();
 
+const leftPanelDisplay = document.querySelector('.left-panel');
+const characterSheet = renderHeroStats(user);
+leftPanelDisplay.append(characterSheet);
+
+
 //event listeners
 churchButtVillage.addEventListener('click', () => {
     window.location = '../';
-
 });
 
 churchButtTalk.addEventListener('click', () => {
@@ -28,6 +33,7 @@ churchButtHeal.addEventListener('click', () => {
         const healMessage = updateCombatLog('Your wounds are magically healed! Your health has been fully restored!');
         botCenter.append(healMessage);
         setUser(user);
+        updateRenderedHeroStats(user);
     } else {
         const denyMessage = updateCombatLog('You are poor. Come back when you are not poor.');
         botCenter.appened(denyMessage);
