@@ -43,6 +43,10 @@ body {
     align-items: center;
 }
 
+.hidden {
+    display: none;
+}
+
 button {
     cursor: pointer;
 }

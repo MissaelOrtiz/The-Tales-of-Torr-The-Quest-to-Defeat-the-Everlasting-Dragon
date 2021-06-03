@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.potion-cart {
+/* .potion-cart {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+    z-index: 1;
+} */
 
 .center-panel {
     width: 100%;
@@ -19,6 +20,8 @@
 
 .top-center {
     background-image: url('../assets/Village.jpeg');
+    background-position-y: 1150px;
+    background-position-x: -10px;
     border: double 10px black;
     padding: 10px;
     border-radius: 10px;
@@ -42,3 +45,49 @@
     font-family: 'Press Start 2P', cursive;
     line-height: 3rem;
 }
+
+.cart-items {
+    z-index: 2;
+}
+
+.for-sale {
+    width: 50px;
+
+}
+
+ul li {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    background-color: hsla(48, 83%, 89%, .7);
+    width: 550px;
+    text-align: center;
+}
+
+.item-right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.item-left-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+
+.fancy-cart {
+    display: flex;
+    background-image: url('../../assets/cart.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    justify-content: center;
+}
+
+
