@@ -28,7 +28,7 @@ body {
 .center-panel {
     background-color: rgba(47, 79, 79, 0);
     padding: 0;
-    margin: 10px;
+    margin: 0;
     display: inline;
     background-image: url('../assets/Village.jpeg');
     height: 998px;
@@ -42,34 +42,36 @@ body {
 }
 
 .map {
-    z-index: 0;
     position: absolute;
 }
-
-/* .locations {
-    padding: 0;
-    margin: 0;
-    background-image: none;
+/* 
+.locations {
     background-repeat: no-repeat;
+    background-size: contain;
 } */
 
 button {
     cursor: pointer;
-    z-index: 50;
     position: relative;
+    font-size: 50px;
+    text-align: center;
+    font-family: Montez;
+    text-align: match-parent;
+    color: cornsilk;
+    text-shadow: 5px 5px 5px #020202;
 }
 
 button.merchant {
-    top: 285px;
-    right: 843px;
+    top: 228px;
+    right: 945px;
     background-image: url('../assets/village/merchant.png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-color: transparent;
     height: 420px;
     width: 276px;
     border: none;
     border-radius: 100px;
-    color: white;
 }
 
 /* button.boss {
@@ -78,55 +80,56 @@ button.merchant {
 } */
 
 button.church {
-    bottom: 20px;
-    left: 70px;
-    background-image: url('../assets/village/church.jpg');
-    background-size: cover;
+    bottom: 33px;
+    left: 252px;
+    background-image: url('../assets/village/church.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: transparent;
-    height: 350px;
-    width: 206px;
+    height: 335px;
+    width: 191px;
     border: none;
     border-radius: 100px;
-    color: white;
 }
 
 button.tavern {
-    top: 410px;
-    left: 470px;
+    top: 430px;
+    left: 314px;
     background-image: url('../assets/village/tavern.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: transparent;
-    height: 520px;
-    width: 276px;
+    height: 500px;
+    width: 512px;
     border: none;
     border-radius: 100px;
-    color: white;
 }
 
 button.laboratory {
-    top: 100px;
-    left: 650px;
-    background-image: url('../assets/village/laboratory.jpg');
-    background-size: cover;
+    top: 277px;
+    left: 420px;
+    background-image: url('../assets/village/laboratory.png');
+    background-size: contain;
     background-color: transparent;
-    height: 240px;
-    width: 96px;
+    background-repeat: no-repeat;
+    height: 525px;
+    width: 225px;
     border: none;
     border-radius: 100px;
-    color: white;
+    z-index: 1;
 }
 
 button.wilderness {
-    top: 540px;
-    left: 92px;
+    bottom: 0;
+    left: 922px;
     background-image: url('../assets/village/wilderness.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: transparent;
-    height: 420px;
-    width: 276px;
+    height: 630px;
+    width: 414px;
     border: none;
     border-radius: 100px;
-    color: white;
 }
 
 button.merchant:hover, button.tavern:hover, 
