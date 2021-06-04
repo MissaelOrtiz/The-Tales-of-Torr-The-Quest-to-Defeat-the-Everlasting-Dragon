@@ -61,11 +61,6 @@ button.merchant {
     border-radius: 100px;
 }
 
-/* button.boss {
-    bottom: 120px;
-    right: 30px;
-} */
-
 button.church {
     bottom: 33px;
     left: 252px;
@@ -119,9 +114,26 @@ button.wilderness {
     border-radius: 100px;
 }
 
+button.boss {
+    bottom: 572px;
+    right: 26px;
+    background-image: url('../assets/village/boss.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    height: 540px;
+    width: 313px;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 70px;
+    color: rgb(77, 255, 0);
+    text-shadow: 10px 10px 10px rgb(50, 109, 2);
+}
+
 button.merchant:hover, button.tavern:hover, 
 button.wilderness:hover, button.church:hover, 
-button.laboratory:hover {
+button.laboratory:hover, button.boss:hover {
         animation: glow 2s ease-in-out infinite alternate;
         background-color: rgba(105, 106, 106, 0.858);
 }
