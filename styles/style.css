@@ -26,7 +26,6 @@ body {
     background-color: rgba(47, 79, 79, 0);
     display: grid;
     width: 100%;
-    height: 100%;
     grid-template-rows: 4fr 1fr 3fr;
     grid-template-columns: 1fr;
     justify-content: center;
