@@ -41,7 +41,7 @@ const bandit = {
         gold: 5,
         xp: 6
     },
-    img: 'bandit'
+    img: 'Bandit'
 };
 const slime = {
     id: 4,
