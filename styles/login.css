@@ -3,19 +3,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.466);
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.76);
+    box-shadow: 0px 20px 100px 100px rgba(0, 0, 0, 0.76);
+}
+
+.title-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
+    background-size: cover;
 }
 
 #title-picture {
     max-width: 900px;
     max-height: 200px;
-    filter: drop-shadow(0 0 0.75rem rgb(238, 36, 30));
+    background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
+    background-size: cover;
 }
 
 .container {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -26,6 +39,7 @@
     align-items: center;
     justify-content: space-between;
     align-self: flex-start;
+    color: white;
 }
 
 #sign-up-form {
@@ -35,6 +49,7 @@
     align-items: center;
     justify-content: space-between;
     align-self: flex-end;
+    color: white;
 }
 
 h2 {
@@ -42,6 +57,7 @@ h2 {
     color: red;
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
+    margin-bottom: 15px;
 }
 
 @-webkit-keyframes glow {
@@ -52,4 +68,15 @@ h2 {
     to {
     text-shadow: 0 0 20px red, 0 0 30px rgb(238, 36, 30), 0 0 40px orangered, 0 0 50px orange, 0 0 60px lightyellow, 0 0 70px white;
     }
+}
+
+.dragon-img {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: rgba(201, 24, 24, 0.329);
+    border-radius: 160px;
+    width: fit-content;
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 7px 7px 9px 15px rgba(0,0,0,0); 
+box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 7px 7px 9px 15px rgba(0,0,0,0);
 }
