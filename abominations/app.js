@@ -19,7 +19,7 @@ let enemy = getCurrentEnemy();
 let user = getCurrentUser();
 
 frankGif.src = `./assets/frank-drink.gif`;
-frankSays.textContent = "Go on, darling, let's see what you've got!";
+frankSays.textContent = `"Go on, darling, let's see what you've got!"`;
 
 const leftPanelDisplay = document.querySelector('.left-panel');
 const characterSheet = renderHeroStats(user);
@@ -42,7 +42,7 @@ attackButton.addEventListener('click', () => {
     if (!attackResult) {
         updateLog(combatLog, `> ${user.hero} attacks ${enemy.stats.name} but misses.`);
         frankGif.src = `./assets/frank-easy.gif`;
-        frankSays.textContent = 'Poor dear, you missed! Is that the best you can do?';
+        frankSays.textContent = `"Poor dear, you missed! Is that the best you can do?"`;
     } else {
         //how much damage does the attack do?apply damage to enemy and update enemy's stats in local storage
         const damageRoll = combatDamageRoll(user);
@@ -55,7 +55,7 @@ attackButton.addEventListener('click', () => {
         heroSprite.src = `../assets/characters/${user.stats.class}-sprite-attack.png`;
         heroSprite.classList.add('hero-attack');
         frankGif.src = `./assets/frank-howbout.gif`;
-        frankSays.textContent = 'Not bad, gorgeous. Keep it up and I can make a hero out of you...';
+        frankSays.textContent = `"Not bad, gorgeous. Keep it up and I can make a hero out of you..."`;
         //timeout to switch back to default image + positioning
         setTimeout(() => {
             heroSprite.src = `../assets/characters/${user.stats.class}-sprite.png`;
@@ -73,7 +73,7 @@ attackButton.addEventListener('click', () => {
             //output results
             updateLog(combatLog, `> ${user.hero} defeated ${enemy.stats.name}. ${enemy.stats.gold} gold and ${enemy.stats.xp} xp gained.`);
             frankGif.src = `./assets/frank-hand.gif`;
-            frankSays.textContent = "Well fought, my babies! If you want to really make me swoon, I've got another delicious abomination cooked up for you to dance with... Howabout it?";
+            frankSays.textContent = `"Well fought, my babies! If you want to really make me swoon, I've got another delicious abomination cooked up for you to dance with... Howabout it?"`;
             updateRenderedHeroStats(user);
             //set local storage
             setUser(user);
@@ -130,7 +130,7 @@ attackButton.addEventListener('click', () => {
             updateRenderedHeroStats(user);
             heroSprite.src = `../assets/characters/${user.stats.class}-sprite-defeat.png`;
             frankGif.src = `./assets/frank-upset.gif`;
-            frankSays.textContent = 'Oh dear, now I have another body to clean up. What a shame, this one could have been such a gallant hero to keep in my trophy case!';
+            frankSays.textContent = `"Oh dear, now I have another body to clean up. What a shame, this one could have been such a gallant hero to keep in my trophy case!"`;
             //return to login after timeout
             const resetButton = document.createElement('button');
             resetButton.classList = 'reset-game';
