@@ -7,7 +7,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr minmax(600px, 5fr);
     background-image: url('../../../assets/village/boss/castle.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,13 +32,6 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-.right-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 button {
@@ -118,15 +111,26 @@ img.hp, img.xp {
     height: 20px;
 }
 
+.hero-sprite {
+    width: 150px;
+}
+
+.enemy-sprite {
+    transform: scaleX(-1);
+    width: 700px;
+}
+
 /* center panel styling */
 .top-center {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    border: 5px double black;
-    border-radius: 10px;
+    align-items: flex-end;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(143, 120, 151, 0.605);
+    animation: glow 5s ease-in-out infinite alternate;
 }
 
 .mid-center {
@@ -134,13 +138,14 @@ img.hp, img.xp {
     justify-content: space-evenly;
     align-items: space-between;
     padding: 10px;
+    background-color: rgba(101, 67, 114, 0.605);
     border: 5px double black;
     border-radius: 10px;
 }
 
 .bot-center {
     height: 100%;
-    background-color: rgba(207, 166, 52, 0.151);
+    background-color: rgba(101, 67, 114, 0.605);
     overflow-y: scroll;
     padding: 10px;
     border: 5px double black;
@@ -150,6 +155,24 @@ img.hp, img.xp {
     line-height: 3.0rem;
 }
 
-.hidden {
-    display: none;
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 
+        0 0 200px rgba(101, 67, 114, 0.605), 
+        0 0 300px rgba(101, 67, 114, 0.605), 
+        0 0 400px rgba(115, 158, 122, 0.781), 
+        0 0 500px rgba(101, 67, 114, 0.605), 
+        0 0 600px rgba(101, 67, 114, 0.605), 
+        0 0 700px rgba(101, 67, 114, 0.605);
+    }
+    to {
+        box-shadow: 
+        0 0 100px rgba(206, 179, 218, 0.605), 
+        0 0 200px rgba(57, 51, 59, 0.605), 
+        0 0 300px rgba(221, 203, 228, 0.605), 
+        0 0 400px rgba(144, 129, 150, 0.605), 
+        0 0 500px rgba(73, 66, 75, 0.605), 
+        0 0 600px rgba(169, 155, 175, 0.605), 
+        0 0 700px rgba(82, 76, 85, 0.605);
+    }
 }
