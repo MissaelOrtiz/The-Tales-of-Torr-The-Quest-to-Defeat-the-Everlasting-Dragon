@@ -13,8 +13,17 @@ form.addEventListener('submit', (e) => {
     const formData = new FormData(form);
     const heroName = formData.get('hero-name');
     const classChoice = document.querySelector('input:checked');
+
+// safety net
+    if (classChoice === null) {
+        return alert('You must choose a class to begin your adventure!');
+    }
+
+    
     const classChoiceValue = classChoice.value;
     const classInfo = findById(classes, classChoiceValue);
+
+    
 
     user.hero = `${heroName}`;
     user.stats = classInfo.stats;
