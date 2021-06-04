@@ -2,6 +2,13 @@
 
 .center-panel {
     Overflow: visible;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/parchment.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -50px;
+    background-color: rgba(47, 79, 79, 0);
 } 
 
 body {
@@ -11,6 +18,7 @@ body {
 main {
     display: flex;
     align-items: center;
+    justify-items: center;
     font-family: 'Fondamento', cursive;
 }
 
@@ -48,7 +56,6 @@ main {
     width: 200px;
     height: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
     border-radius: 100px;
     border: 3px double rgb(233, 156, 55);
 }
@@ -66,22 +73,15 @@ input:checked + div {
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 }
 
-input:checked + .portrait {
+input:checked + div .portrait {
     background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
-}
-
-
-label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .name-input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-items: center;
+    align-self: center;
     margin: 15px;
 }
 
@@ -115,3 +115,13 @@ input {
     color: rgb(233, 156, 55);
     text-shadow: 2px 2px 5px rgb(61, 39, 11);
 }
+
+.pick-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
