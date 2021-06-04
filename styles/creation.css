@@ -7,12 +7,12 @@
     background-image: url('../assets/parchment.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -50px;
     background-color: rgba(47, 79, 79, 0);
 } 
 
 body {
     display: flex;
+    height: fit-content;
 }
 
 main {

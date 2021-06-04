@@ -16,7 +16,7 @@ const leftPanelDisplay = document.querySelector('.left-panel');
 
 const user = getCurrentUser();
 function getXp(user) {
-    if (user.stats.xp >= 50) {
+    if (user.stats.level >= 2) {
         return greaterPotions;
     } else {
         return potions;
