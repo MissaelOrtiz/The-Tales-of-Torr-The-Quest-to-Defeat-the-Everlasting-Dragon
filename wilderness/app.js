@@ -13,10 +13,15 @@ const enemySprite = document.querySelector('.enemy-sprite');
 const leftPanelDisplay = document.querySelector('.left-panel');
 
 //set global constants
-const randomEnemy = generateMonster();
+let user = getCurrentUser();
+let randomEnemy = generateMonster();
+
+while (randomEnemy.stats.level > user.stats.level) {
+    randomEnemy = generateMonster();
+}
+
 setCurrentEnemy(randomEnemy);
 let enemy = getCurrentEnemy();
-let user = getCurrentUser();
 
 const characterSheet = renderHeroStats(user);
 leftPanelDisplay.append(characterSheet);
