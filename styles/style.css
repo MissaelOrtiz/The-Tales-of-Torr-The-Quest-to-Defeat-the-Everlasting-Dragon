@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import "./node_modules/nes.css/css/nes.css";
 
 :root {
     --gutter: 20px;
@@ -8,7 +7,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr minmax(750px, 3fr) 1fr;
     background-image: url('https://i.pinimg.com/originals/13/66/a4/1366a46d44b85f999ca01329adae7369.png');
 }
 
@@ -32,7 +31,7 @@ body {
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .right-panel {

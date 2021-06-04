@@ -1,5 +1,3 @@
-@import "./node_modules/nes.css/css/nes.css";
-
 body {
     display: grid;
     grid-template-columns: 1fr 1331px 1fr;
@@ -89,7 +87,7 @@ button.tavern {
 
 button.laboratory {
     top: 156px;
-    left: 414px;
+    left: 419px;
     background-image: url('../assets/village/laboratory.png');
     background-size: contain;
     background-color: transparent;
@@ -120,8 +118,9 @@ button.boss {
     background-image: url('../assets/village/boss.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 236px;
-    width: 320px;
+    background-color: transparent;
+    height: 272px;
+    width: 369px;
     border: none;
     border-radius: 100px;
     text-align: center;
