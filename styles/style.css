@@ -88,6 +88,8 @@ button {
     width: 200px;
     position: relative;
     z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
 }
 
 .hero-picture-border {

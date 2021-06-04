@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+
 .center-panel {
     Overflow: visible;
 } 
@@ -9,7 +11,9 @@ body {
 main {
     display: flex;
     align-items: center;
+    font-family: 'Fondamento', cursive;
 }
+
 .character {
     display: flex;
     flex-direction: row;
@@ -44,8 +48,9 @@ main {
     width: 200px;
     height: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
     border-radius: 100px;
-    border: 3px ;
+    border: 3px double rgb(233, 156, 55);
 }
 
 .text {
@@ -59,6 +64,10 @@ input:checked + div {
     color: gold;
     background: #00000049;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+input:checked + .portrait {
+    background-image: url('https://img1.picmix.com/output/stamp/normal/0/4/0/3/653040_2134b.gif');
 }
 
 
@@ -83,4 +92,26 @@ input {
 .visible {
     display: inline-block;
     margin: 15px;
+}
+
+
+.description, .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.219);
+    border-radius: 30px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(233, 156, 55);
+    text-shadow: 2px 2px 5px rgb(61, 39, 11);
 }
