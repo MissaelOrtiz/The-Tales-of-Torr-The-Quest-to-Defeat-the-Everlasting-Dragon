@@ -62,14 +62,14 @@ button.merchant {
 }
 
 button.church {
-    bottom: 33px;
-    left: 252px;
+    bottom: 75px;
+    left: 249px;
     background-image: url('../assets/village/church.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-color: transparent;
-    height: 335px;
-    width: 191px;
+    height: 227px;
+    width: 196px;
     border: none;
     border-radius: 100px;
 }
@@ -84,18 +84,18 @@ button.tavern {
     height: 500px;
     width: 512px;
     border: none;
-    border-radius: 100px;
+    border-radius: 150px;
 }
 
 button.laboratory {
-    top: 277px;
-    left: 420px;
+    top: 156px;
+    left: 414px;
     background-image: url('../assets/village/laboratory.png');
     background-size: contain;
     background-color: transparent;
     background-repeat: no-repeat;
-    height: 525px;
-    width: 225px;
+    height: 263px;
+    width: 229px;
     border: none;
     border-radius: 100px;
     z-index: 1;
@@ -111,24 +111,24 @@ button.wilderness {
     height: 630px;
     width: 414px;
     border: none;
-    border-radius: 100px;
+    border-radius: 150px;
 }
 
 button.boss {
-    bottom: 572px;
-    right: 26px;
+    bottom: 697px;
+    right: 37px;
     background-image: url('../assets/village/boss.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: transparent;
-    height: 540px;
-    width: 313px;
+    height: 236px;
+    width: 320px;
     border: none;
     border-radius: 100px;
     text-align: center;
     font-size: 70px;
-    color: rgb(77, 255, 0);
-    text-shadow: 10px 10px 10px rgb(50, 109, 2);
+    color: rgb(170, 29, 29);
+    text-shadow: 10px 10px 20px rgba(76, 42, 87, 0.653), 
+    10px 10px 10px rgba(220, 120, 240, 0.459);
 }
 
 button.merchant:hover, button.tavern:hover, 
@@ -136,6 +136,33 @@ button.wilderness:hover, button.church:hover,
 button.laboratory:hover, button.boss:hover {
         animation: glow 2s ease-in-out infinite alternate;
         background-color: rgba(105, 106, 106, 0.858);
+}
+
+.glow {
+    animation: boss-glow 2s ease-in-out infinite alternate;
+    background-color: rgba(72, 41, 78, 0.459);
+
+}
+@-webkit-keyframes boss-glow {
+    from {
+        box-shadow: 
+        0 0 20px rgba(76, 42, 87, 0.653), 
+        0 0 30px rgba(220, 120, 240, 0.459), 
+        0 0 40px rgba(76, 42, 87, 0.653), 
+        0 0 50px rgba(220, 120, 240, 0.459), 
+        0 0 60px rgba(76, 42, 87, 0.653), 
+        0 0 70px rgba(220, 120, 240, 0.459);
+    }
+    to {
+        box-shadow: 
+        0 0 10px rgba(55, 35, 73, 0.666), 
+        0 0 20px rgba(186, 186, 186, 0.701), 
+        0 0 30px rgba(211, 211, 211, 0.849), 
+        0 0 40px rgba(181, 181, 181, 0.481), 
+        0 0 50px rgba(180, 178, 178, 0.81), 
+        0 0 60px rgba(210, 210, 210, 0.742), 
+        0 0 70px rgba(49, 44, 44, 0.714);
+    }
 }
 
 @-webkit-keyframes glow {
