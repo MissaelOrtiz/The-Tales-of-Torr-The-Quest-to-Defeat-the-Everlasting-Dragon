@@ -36,11 +36,12 @@ wildernessButton.addEventListener('click', () => {
 bossButton.addEventListener('click', () => {
     window.location = './Castle/';
 });
+
 // QUESTLISTENER
 if (!user.hero) {
     window.location = '../creation/';
 }
 
-if (user.stats.xp >= 100) {
+if (user.stats.level >= 3) {
     bossButton.classList.toggle('hidden');
 }
