@@ -48,12 +48,7 @@ export function renderPotions(item) {
             }
         }
     });
-    div1.appendChild(h3);
-    div1.appendChild(img);
-    div1.appendChild(p1);
-    div2.appendChild(p2);
-    div2.appendChild(button);
-    li.appendChild(div1);
-    li.appendChild(div2);
+    div1.appens(h3, img, p1, p2, button);
+    li.append(div1, div2);
     return li;
 }

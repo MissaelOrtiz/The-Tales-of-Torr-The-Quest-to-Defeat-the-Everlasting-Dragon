@@ -11,10 +11,11 @@ export function renderHeroStats(user) {
     const div1 = document.createElement('div');
     div1.classList.add('portrait');
     const imgBorder = document.createElement('img');
-    imgBorder.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/border.png';
+    // i might have the path wrong, but it's better for these to be relative rather than pointing to a deployed site if possible
+    imgBorder.src = '../assets/border.png';
     imgBorder.classList.add('hero-picture-border');
     const imgPortrait = document.createElement('img');
-    imgPortrait.src = `https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/characters/${user.stats.class}.png`;
+    imgPortrait.src = `../assets/characters/${user.stats.class}.png`;
     imgPortrait.classList.add('hero-picture');
     div1.append(imgBorder, imgPortrait);
 
@@ -26,7 +27,7 @@ export function renderHeroStats(user) {
     const p1 = document.createElement('p');
     const hpImg = document.createElement('img');
     hpImg.classList.add('hp');
-    hpImg.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/hp-small.png';
+    hpImg.src = '../assets/hp-small.png';
     const span1 = document.createElement('span');
     span1.classList.add('health-stat');
     span1.textContent = `${user.stats.health} / ${user.stats.maxHealth}`;
@@ -34,7 +35,7 @@ export function renderHeroStats(user) {
 
     const imgBar = document.createElement('img');
     imgBar.classList.add('bar');
-    imgBar.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
+    imgBar.src = '../assets/bar-short.png';
 
     //attack stat
     const p2 = document.createElement('p');
@@ -62,7 +63,7 @@ export function renderHeroStats(user) {
     
     const imgBar2 = document.createElement('img');
     imgBar2.classList.add('bar');
-    imgBar2.src = 'https://missaelortiz.github.io/The-Tales-of-Torr-The-Quest-to-Defeat-the-Everlasting-Dragon/assets/bar-short.png';
+    imgBar2.src = '../assets/bar-short.png';
 
     //gold stat
     const p5 = document.createElement('p');
