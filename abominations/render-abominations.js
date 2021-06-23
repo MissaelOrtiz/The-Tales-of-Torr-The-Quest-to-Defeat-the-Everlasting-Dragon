@@ -3,23 +3,24 @@ import tops from './tops.js';
 import leggies from './leggies.js';
 import { setCurrentEnemy } from '../js/local-storage-utils.js';
 import { findById } from '../js/utils.js';
-
+import { firstNames, lastNames } from './names.js';
 // grab DOM elements
 const img1 = document.querySelector('#top-img');
 const img2 = document.querySelector('#leggie-img');
 // const firstName = document.querySelector('#first-name');
 const name = document.querySelector('#abominame');
 
+function grabRandom(items) {
+    const options = Math.floor(Math.random() * items.length);
+    return items[options];
+}
+
 function grabRandomTop() {
-    const topOptions = Math.floor(Math.random() * tops.length);
-    const randomtop = tops[topOptions];
-    return randomtop;
+    return grabRandom(tops);
 }
 
 function grabRandomLeggie() {
-    const leggieOptions = Math.floor(Math.random() * leggies.length);
-    const randomLeggie = leggies[leggieOptions];
-    return randomLeggie;
+    return grabRandom(leggies);
 }
 
 function capFirst(string) {
@@ -31,12 +32,13 @@ function getRandomInt(min, max) {
 }
 
 export function generateName() {
-    var name1 = ['Borticle', 'Pickleman', 'Bungholemius', 'Boofenacious', 'Barfimillius', 'Bonkjelly', 'Bacterial', 'Bowserlicious', 'Brandynugget', 'Berillium', 'Bendandsnap', 'Breadbunter', 'Benedict', 'Blathers', 'Basketball', 'Brundlefly', 'Blashpemous', 'Bronelius', 'Quackmuncher', 'Bucketwrench', 'Brøtherhamper', 'Bansheesweat', 'Battlestar', 'Borkenator', 'Bromeister', 'Boomtastic', 'Bignacious D.'];
-    var name2 = ['Crotchetygoop', 'Quack III Esq', 'Crucialpants', 'Crumbtananatch', 'Cucumbermelon', 'Corderoy', 'Clementine', 'Crackity-Jones', 'Codswallop', 'Crustaceous', 'Capitalism', 'Craftfloop', 'California', 'Cloptastic', 'Cumberbatch', 'Choochootrain', 'Clowntickler', 'Cahootsman', 'Crabapple', 'Chinchillasplash', 'Chestershire', 'Cerulean', 'Chippendale', 'Clappenator 3000', 'Camembert'];
-    var name = capFirst(name1[getRandomInt(0, name1.length - 1)]) + ' ' + capFirst(name2[getRandomInt(0, name2.length - 1)]);
-    return name;
+    const name1 = capFirst(firstNames[getRandomInt(0, firstNames.length - 1)]);
+    const name2 = capFirst(lastNames[getRandomInt(0, lastNames.length - 1)]);
+
+    return `${name1} ${name2}`;
 }
 
+// nice function composition here!
 export function renderAbomination() {
     let top = grabRandomTop();
     let leggie = grabRandomLeggie();
@@ -46,7 +48,7 @@ export function renderAbomination() {
     abomination.name = firstName;
     abomination.type = species;
     setCurrentEnemy(abomination);
-
+  
     img1.src = `./assets/${top.image}`;
     img2.src = `./assets/${leggie.image}`;
 
