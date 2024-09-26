@@ -1,4 +1,5 @@
 
+// usually, capitalized words refer to classes, so this might be confusing to future devs
 const Duck = {
     id: 301,
     name: 'duck',

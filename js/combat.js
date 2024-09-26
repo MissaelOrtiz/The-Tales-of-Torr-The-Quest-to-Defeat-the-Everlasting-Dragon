@@ -19,11 +19,7 @@ export function combatDamageRoll(combatant) {
 }
 
 export function doesAttackHit(attacker, defender, attackRoll) {
-    if (attackRoll + attacker.stats.speed >= defender.stats.ac) {
-        return true;
-    } else {
-        return false;
-    }
+    return attackRoll + attacker.stats.speed >= defender.stats.ac;
 }
 
 export function dealDamage(defender, damageRoll) {

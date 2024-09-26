@@ -25,7 +25,7 @@ form.addEventListener('submit', (e) => {
 
     
 
-    user.hero = `${heroName}`;
+    user.hero = heroName;
     user.stats = classInfo.stats;
     setUser(user);
     window.location = '../wilderness/';
@@ -34,6 +34,6 @@ form.addEventListener('submit', (e) => {
 // CONSTANT LISTENERS
 if (!user) {
     window.location = '../';
-} else if (!user.hero === false) {
+} else if (user.hero /* seems like this would work the same? */) {
     window.location = '../village/';
 }
